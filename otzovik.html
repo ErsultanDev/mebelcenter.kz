@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<?php
+$time=time();
+if (session_id()=='') session_start();
+
+$db=mysqli_connect("localhost","v_20478_Gulbanu","dala3940","v_20478_metal") or die();
+$res=mysqli_query($db,"set names utf8");
+
+$mess_url=mysqli_real_escape_string($db,basename($_SERVER['SCRIPT_FILENAME']));
+
+//получаем id текущей темы
+$res=mysqli_query($db,"SELECT id FROM таблица WHERE file_name='".$mess_url."'");
+$res=mysqli_fetch_array($res);
+$theme_id=$res["id"];
+
+if (isset($_POST["contr_cod"])){    //отправлен комментарий
+ $mess_login=htmlspecialchars($_POST["mess_login"]);
+ $user_text=htmlspecialchars($_POST["user_text"]);
+ if (md5($_POST["contr_cod"])==$_POST["prov_summa"]){    //код правильный
+  if ($mess_login!='' and $user_text!=''){
+   if (is_numeric($_POST["parent_id"]) and is_numeric($_POST["f_parent"]))
+    $res=mysqli_query($db,"insert into comment
+    (parent_id, first_parent, date, theme_id, login, message)
+    values ('".$_POST["parent_id"]."','".$_POST["f_parent"]."',
+    '".$time."','".$theme_id."','".$mess_login."','".$user_text."')");
+   else $res=mysqli_query($db,"insert into comment (date, theme_id, login, message)
+   values ('".$time."','".$theme_id."','".$mess_login."','".$user_text."')");
+    $_SESSION["send"]="Комментарий принят!";
+    header("Location: $mess_url#last"); exit;
+  }
+  else {
+   $_SESSION["send"]="Не все поля заполнены!";
+   header("Location: $mess_url#last"); exit;
+  }
+ }
+ else {
+  $_SESSION["send"]="Неверный проверочный код!";
+  header("Location: $mess_url#last"); exit;
+ }
+}
+
+if (isset($_SESSION["send"]) and $_SESSION["send"]!="") {    //вывод сообщения
+    echo '<script type="text/javascript">alert("'.$_SESSION["send"].'");</script>';
+    $_SESSION["send"]="";
+}
+?>
+<head>
+<title>Купить мебель в Алматы на заказ </title>
+<meta name="keywords" content="мебель, мебель в Алматы, мебель по индивидуальному заказу">
+<meta name="description" content="У нас Вы сможете купить мебель по индивидуальному заказу или готовую мебель.">
+<meta charset="utf-8"><link rel="shortcut icon" href="images/log.ico" type="image/x-icon">
+<link rel="stylesheet" href="css/reset.css" type="text/css" media="screen">
+<link rel="stylesheet" href="css/style.css" type="text/css" media="screen">
+<link rel="stylesheet" href="css/grid.css" type="text/css" media="screen">
+<script src="js/jquery-1.6.2.min.js"></script><script type="text/javascript" src="js/jquery.js"></script><script type="text/javascript" src="js/jquery.maskedinput-1.2.2.js"></script>
+<script src="js/jquery.easing.1.3.js"></script>
+<script src="js/jcarousellite_1.0.1.js"></script>
+<script src="js/jquery.galleriffic.js"></script>
+<script src="js/jquery.opacityrollover.js"></script>
+<script>
+$(document).ready(function () {
+    $(".jCarouselLite").jCarouselLite({
+        btnNext: ".next",
+        btnPrev: ".prev",
+        speed: 400,
+        vertical: false,
+        circular: true,
+        easing: 'easeOutQuart',
+        visible: 4,
+        start: 0,
+        scroll: 1
+    });
+});
+</script>
+<!--[if lt IE 9]>
+<script src="js/html5.js"></script>
+<link rel="stylesheet" href="css/ie.css" type="text/css" media="screen">
+<![endif]-->
+</head>
+<body id="page3"><script type="text/javascript">jQuery(function($){ $.mask.definitions['~']='[+-]';$('#phone').mask('8(799) 999-9999');});</script>	
+<!--==============================header=================================-->
+<header>
+  <div class="row-1">
+    <div class="main">
+      <div class="container_12">
+        <div class="grid_13">
+          <nav>
+           <ul class="menu">
+              <li><a href="index.html">Главная</a></li>
+             <li><a href="dostavka.html">Доставка</a></li><li><a href="portfolio.html">Наши работы</a></li>
+              <li><a  href="catalog.html">Каталог Товаров</a></li>
+			   <li><a class="active" href="otzovik.html">Отзывы</a></li>
+              <li><a  href="about-us.html">О нас</a></li>
+              <li><a  href="contact.html">Контакты</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <div class="clear"></div>
+    </div>
+  </div>
+  <div class="row-2">
+    <div class="main">
+      <div class="container_12">
+        <div class="grid_9">
+          <h1> <a class="logo" href="index.html">Me<strong>b</strong>el</a> <span>Center</span> </h1>
+        </div>
+        <div class="grid_3">
+         <span class="title img-indent3">8(727) 344 99 00</span>
+        </div>
+        <div class="clear"></div>
+      </div>
+    </div>
+  </div>
+</header>
+<!-- слайдик-->
+
+			<section id="content">
+			          <div class="main">
+            <div class="box">
+              <div class="padding">
+                <div class="container_12">
+                  <div class="wrapper">
+                    <div class="grid_12">
+                      <div class="indent-left p2">
+					  
+                      <h3 class="prev-indent-bot">Отзывы</h3>
+                      </div>
+					  
+               
+						 </div>
+						
+                     
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+		  
+          <br><br><br>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="bg-bot">
+    <div class="main">
+      <div class="container_12">
+       <div class="wrapper">
+            <article class="grid_4">
+            <div class="indent-right2">
+             <div class="bg-bot_text">
+                    <h3 class="prev-indent-bot">Где купить</h3>
+                    <p class="prev-indent-bot" style="font-size:26px;">корпусную мебель?</p>
+                  </div>
+              <p style="font-size:16px" >Мы предлагаем изготовление мебели по вашему индивидуальному заказу </p>
+              <a class="button" href="contact.html">посмотреть</a> </div>
+          </article>
+         
+         <article class="grid_4" style="margin-left:195px;"><h3 class="prev-indent-bot2">Мебель по параметрам</h3>
+            <div class="wrapper">
+              <div class="grid_4 alpha">
+                <div class="indent-right2">
+                   <ul class="price-list" style="margin-top:10px">
+                     <li><a href="prixozhie.html">Для прихожей</a><strong>&nbsp;</strong></li>
+                    <li><a href="spalni.html">Для спальни</a><strong>&nbsp;</strong></li>
+                    <li><a href="kuhni.html">Для кухни</a><strong>&nbsp;</strong></li>
+                    <li><a href="gostinye.html">Для гостиной</a><strong>&nbsp;</strong></li>
+                    <li><a href="detskie.html">Для детской комнаты</a><strong>&nbsp;</strong></li>
+                    <li><a href="ofisnaya-mebel.html">Для кабинета</a><strong>&nbsp;</strong></li>
+					<li><a href="mebel-butik.html">Для бутика</a><strong>&nbsp;</strong></li>
+                    <li class="last"><a href="bar.html">Для кафе, баров</a><strong>&nbsp;</strong></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--==============================footer=================================-->
+<footer>
+ <div class="main">
+    <div class="container_12">
+       <div class="wrapper">
+        <div class="grid_4">
+         <div class ="foot">&copy; 2010-2021 MebelCenter.kz</div>
+          <div class ="foot">Все права защищены</div>
+          <!-- {%FOOTER_LINK} -->
+        </div>
+        <div class="grid_5" style="margin-left:125px;"> <span class="phone-numb"><span>8(727)</span> 344-99-00</span> </div>
+       <div class="grid_5"><div id="socialMedia" class="span3 pull-right"><a href="https://www.youtube.com/channel/UCNDMIviMuZOhhCP7xoxGYAA/videos"><img width="50" height="50" src="images/youtube.png" title="youtube" alt="youtube"/></a><a href="https://www.instagram.com/idiamarket/"><img width="50" height="50" src="images/insta.png" title="instagram" alt="instagram"></a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+<script>
+$(window).load(function () {
+    // We only want these styles applied when javascript is enabled
+    $('div.navigation').css({
+        'width': '320px',
+        'float': 'right'
+    });
+    $('div.content').css('display', 'block');
+
+    // Initially set opacity on thumbs and add
+    // additional styling for hover effect on thumbs
+    var onMouseOutOpacity = 0.5;
+    $('#thumbs ul.thumbs li span').opacityrollover({
+        mouseOutOpacity: onMouseOutOpacity,
+        mouseOverOpacity: 0.0,
+        fadeSpeed: 'fast',
+        exemptionSelector: '.selected'
+    });
+
+    // Initialize Advanced Galleriffic Gallery
+    var gallery = $('#thumbs').galleriffic({
+        delay: 7000,
+        numThumbs: 12,
+        preloadAhead: 6,
+        enableTopPager: false,
+        enableBottomPager: false,
+        imageContainerSel: '#slideshow',
+        controlsContainerSel: '',
+        captionContainerSel: '',
+        loadingContainerSel: '',
+        renderSSControls: true,
+        renderNavControls: true,
+        playLinkText: 'Play Slideshow',
+        pauseLinkText: 'Pause Slideshow',
+        prevLinkText: 'Prev',
+        nextLinkText: 'Next',
+        nextPageLinkText: 'Next',
+        prevPageLinkText: 'Prev',
+        enableHistory: true,
+        autoStart: 7000,
+        syncTransitions: true,
+        defaultTransitionDuration: 900,
+        onSlideChange: function (prevIndex, nextIndex) {
+            // 'this' refers to the gallery, which is an extension of $('#thumbs')
+            this.find('ul.thumbs li span').css({
+                opacity: 0.5
+            })
+        },
+        onPageTransitionOut: function (callback) {
+            this.find('ul.thumbs li span').css({
+                display: 'block'
+            });
+        },
+        onPageTransitionIn: function () {
+            this.find('ul.thumbs li span').css({
+                display: 'none'
+            });
+        }
+    });
+});
+</script>
+  <script src="js/main.js"></script>
+</body></html>
