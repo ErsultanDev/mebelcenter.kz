@@ -28,6 +28,7 @@ const body = document.querySelector('body'),
   content_card = document.querySelectorAll('.content_card'),
   b4_item = document.querySelectorAll('.b4_item'),
   pictures_box_slider = document.querySelector('.Pictures-box_slider'),
+  our_page_Slider = document.querySelector('.our_page_Slider'),
   action_slider = document.querySelector('.action_slider');
 
 contact_slider &&
@@ -173,6 +174,24 @@ if (pictures_box_slider != null) {
     slidesToScroll: 2,
     arrows: true,
     dots: true,
+  });
+}
+if (our_page_Slider != null) {
+  $('.our_page_Slider').slick({
+    slidesToShow: 2,
+    slidesToScroll: 1,
+    arrows: true,
+    variableWidth: true,
+    centerMode: true,
+    dots: true,
+    responsive: [
+      {
+        breakpoint: 1122,
+        settings: {
+          variableWidth: true,
+        },
+      },
+    ],
   });
 }
 
