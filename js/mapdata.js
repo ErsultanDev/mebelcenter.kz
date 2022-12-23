@@ -8,7 +8,7 @@ var simplemaps_countrymap_mapdata = {
 
         //State defaults
         state_description: "State description",
-        state_color: "#ccc",
+        state_color: "#65b9b7",
         state_hover_color: "#3B729F",
         state_url: "",
         border_size: 1.5,
@@ -44,7 +44,7 @@ var simplemaps_countrymap_mapdata = {
 
         //Zoom settings
         zoom: "yes",
-        manual_zoom: "no",
+        manual_zoom: "yes",
         back_image: "no",
         initial_back: "no",
         initial_zoom: "-1",

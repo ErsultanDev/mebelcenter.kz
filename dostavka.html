@@ -55,7 +55,7 @@
 <![endif]-->
 </head>
 
-<body id="page3">
+<body>
   <script type="text/javascript">
     jQuery(function ($) {
       $.mask.definitions['~'] = '[+-]';
@@ -114,90 +114,99 @@
     </div>
   </div>
 
-<div class="deli_main">
-  <section id="content">
-    <div class="main">
+  <div class="deli_main">
+    <section id="content">
+      <div class="main">
 
-      <div class="delivery_main">
-        <div class="delivery_block_1">
-          <div class="delivery_block_title">
-            <h3>ДОСТАВКА</h3>
+        <div class="delivery_main">
+          <div class="delivery_block_1">
+            <div class="delivery_block_title">
+              <h3>ДОСТАВКА</h3>
+            </div>
+            <div class="delivery_block_content">
+              <div class="delivery_block_text">
+                <p>Доставим Ваш заказ в черте города <span>БЕСПЛАТНО!</span> Товар доставляется в согласованный с
+                  вами день и определенный временной интервал по указанному вами адресу. Доставку осуществляют
+                  опытные сотрудники нашего отдела доставки со значимым водительским стажем, что обеспечивает
+                  своевременное получение товара покупателем. А также мы предоставляем подробный фотоотчет, чтобы
+                  наша работа была прозрачной и подробной.
+                </p>
+              </div>
+              <div class="delivery_block_img">
+                <img src="images/del_1.jpg" alt="">
+              </div>
+            </div>
+
           </div>
-          <div class="delivery_block_content">
-            <div class="delivery_block_text">
-              <p>Доставим Ваш заказ в черте города <span>БЕСПЛАТНО!</span> Товар доставляется в согласованный с
-                вами день и определенный временной интервал по указанному вами адресу. Доставку осуществляют
-                опытные сотрудники нашего отдела доставки со значимым водительским стажем, что обеспечивает
-                своевременное получение товара покупателем. А также мы предоставляем подробный фотоотчет, чтобы
-                наша работа была прозрачной и подробной.
+
+          <div class="delivery_block_2">
+            <div class="delivery_block_title">
+              <h3>ПРЕИМУЩЕСТВА
+              </h3>
+            </div>
+            <div class="delivery_block_content">
+              <p>• У нас имеется собственный отдел логистики, что позволяет осуществлять быструю и надёжную доставку для
+                наших клиентов;</p>
+              <p>• Мы предоставляем подробный фотоотчет, чтобы наша работа была прозрачной и подробной.</p>
+              <p>• Подбирается оптимальный транспорт для перевозки под определенные характеристики товара.</p>
+            </div>
+            <div class="delivery_block_img delivery_block_3_img">
+              <img src="images/del_3.jpg" alt="">
+            </div>
+          </div>
+
+          <div class="delivery_block_2 delivery_block_3">
+            <div class="delivery_block_title">
+              <h3>СОБСТВЕННЫЙ АВТОПАРК</h3>
+            </div>
+            <div class="delivery_block_content">
+              <p>Также есть свой Автопарк, состоящий из транспортных средств. С учетом индивидуальных особенностей груза
+                подбирается оптимальный транспорт для перевозки под определенные характеристики товара.
               </p>
             </div>
-            <div class="delivery_block_img">
-              <img src="images/del_1.jpg" alt="">
+            <div class="delivery_block_img delivery_block_3_img">
+              <img src="images/del_2.jpg" alt="">
             </div>
           </div>
+          <div class="delivery_block_2 delivery_block_4">
+            <div class="delivery_block_title">
+              <h3>Доставим Ваш заказ в черте города БЕСПЛАТНО!</h3>
+            </div>
+            <div id="kzmap">
+              <div id="map"></div>
+            </div>
 
-        </div>
+          </div>
 
-        <div class="delivery_block_2">
-          <div class="delivery_block_title">
-            <h3>ПРЕИМУЩЕСТВА
-            </h3>
-          </div>
-          <div class="delivery_block_content">
-            <p>• У нас имеется собственный отдел логистики, что позволяет осуществлять быструю и надёжную доставку для
-              наших клиентов;</p>
-            <p>• Мы предоставляем подробный фотоотчет, чтобы наша работа была прозрачной и подробной.</p>
-            <p>• Подбирается оптимальный транспорт для перевозки под определенные характеристики товара.</p>
-          </div>
-          <div class="delivery_block_img delivery_block_3_img">
-            <img src="images/del_3.jpg" alt="">
-          </div>
-        </div>
-
-        <div class="delivery_block_2 delivery_block_3">
-          <div class="delivery_block_title">
-            <h3>СОБСТВЕННЫЙ АВТОПАРК</h3>
-          </div>
-          <div class="delivery_block_content">
-            <p>Также есть свой Автопарк, состоящий из транспортных средств. С учетом индивидуальных особенностей груза
-              подбирается оптимальный транспорт для перевозки под определенные характеристики товара.
-            </p>
-          </div>
-          <div class="delivery_block_img delivery_block_3_img">
-            <img src="images/del_2.jpg" alt="">
+          <div class="contact_end delivery_block_4">
+            <iframe id="map_43164501" frameborder="0" width="1162px" height="500px"
+              sandbox="allow-modals allow-forms allow-scripts allow-same-origin allow-popups allow-top-navigation-by-user-activation"></iframe>
+            <script type="text/javascript">
+              (function (e, t) {
+                var r = document.getElementById(e);
+                r.contentWindow.document.open(), r.contentWindow.document.write(atob(t)), r.contentWindow.document
+                  .close()
+              })("map_43164501",
+                "PGJvZHk+PHN0eWxlPgogICAgICAgIGh0bWwsIGJvZHkgewogICAgICAgICAgICBtYXJnaW46IDA7CiAgICAgICAgICAgIHBhZGRpbmc6IDA7CiAgICAgICAgfQogICAgICAgIGh0bWwsIGJvZHksICNtYXAgewogICAgICAgICAgICB3aWR0aDogMTAwJTsKICAgICAgICAgICAgaGVpZ2h0OiAxMDAlOwogICAgICAgIH0KICAgICAgICAuYnVsbGV0LW1hcmtlciB7CiAgICAgICAgICAgIHdpZHRoOiAyMHB4OwogICAgICAgICAgICBoZWlnaHQ6IDIwcHg7CiAgICAgICAgICAgIGJveC1zaXppbmc6IGJvcmRlci1ib3g7CiAgICAgICAgICAgIGJhY2tncm91bmQtY29sb3I6ICNmZmY7CiAgICAgICAgICAgIGJveC1zaGFkb3c6IDAgMXB4IDNweCAwIHJnYmEoMCwgMCwgMCwgMC4yKTsKICAgICAgICAgICAgYm9yZGVyOiA0cHggc29saWQgIzAyODFmMjsKICAgICAgICAgICAgYm9yZGVyLXJhZGl1czogNTAlOwogICAgICAgIH0KICAgICAgICAucGVybWFuZW50LXRvb2x0aXAgewogICAgICAgICAgICBiYWNrZ3JvdW5kOiBub25lOwogICAgICAgICAgICBib3gtc2hhZG93OiBub25lOwogICAgICAgICAgICBib3JkZXI6IG5vbmU7CiAgICAgICAgICAgIHBhZGRpbmc6IDZweCAxMnB4OwogICAgICAgICAgICBjb2xvcjogIzI2MjYyNjsKICAgICAgICB9CiAgICAgICAgLnBlcm1hbmVudC10b29sdGlwOmJlZm9yZSB7CiAgICAgICAgICAgIGRpc3BsYXk6IG5vbmU7CiAgICAgICAgfQogICAgICAgIC5kZy1wb3B1cF9oaWRkZW5fdHJ1ZSB7CiAgICAgICAgICAgIGRpc3BsYXk6IGJsb2NrOwogICAgICAgIH0KICAgICAgICAubGVhZmxldC1jb250YWluZXIgLmxlYWZsZXQtcG9wdXAgLmxlYWZsZXQtcG9wdXAtY2xvc2UtYnV0dG9uIHsKICAgICAgICAgICAgdG9wOiAwOwogICAgICAgICAgICByaWdodDogMDsKICAgICAgICAgICAgd2lkdGg6IDIwcHg7CiAgICAgICAgICAgIGhlaWdodDogMjBweDsKICAgICAgICAgICAgZm9udC1zaXplOiAyMHB4OwogICAgICAgICAgICBsaW5lLWhlaWdodDogMTsKICAgICAgICB9CiAgICA8L3N0eWxlPjxkaXYgaWQ9Im1hcCI+PC9kaXY+PHNjcmlwdCB0eXBlPSJ0ZXh0L2phdmFzY3JpcHQiIHNyYz0iaHR0cHM6Ly9tYXBzLmFwaS4yZ2lzLnJ1LzIuMC9sb2FkZXIuanM/cGtnPWZ1bGwmYW1wO3NraW49bGlnaHQiPjwvc2NyaXB0PjxzY3JpcHQ+KGZ1bmN0aW9uKGUsdCl7dmFyIHI9SlNPTi5wYXJzZShlKSxuPUpTT04ucGFyc2UodCk7ZnVuY3Rpb24gYShlKXtyZXR1cm4gZGVjb2RlVVJJQ29tcG9uZW50KGF0b2IoZSkuc3BsaXQoIiIpLm1hcChmdW5jdGlvbihlKXtyZXR1cm4iJSIrKCIwMCIrZS5jaGFyQ29kZUF0KDApLnRvU3RyaW5nKDE2KSkuc2xpY2UoLTIpfSkuam9pbigiIikpfURHLnRoZW4oZnVuY3Rpb24oKXt2YXIgZT1ERy5tYXAoIm1hcCIse2NlbnRlcjpbbi5sYXQsbi5sb25dLHpvb206bi56b29tfSk7REcuZ2VvSlNPTihyLHtzdHlsZTpmdW5jdGlvbihlKXt2YXIgdCxyLG4sYSxvO3JldHVybntmaWxsQ29sb3I6bnVsbD09PSh0PWUpfHx2b2lkIDA9PT10P3ZvaWQgMDp0LnByb3BlcnRpZXMuZmlsbENvbG9yLGZpbGxPcGFjaXR5Om51bGw9PT0ocj1lKXx8dm9pZCAwPT09cj92b2lkIDA6ci5wcm9wZXJ0aWVzLmZpbGxPcGFjaXR5LGNvbG9yOm51bGw9PT0obj1lKXx8dm9pZCAwPT09bj92b2lkIDA6bi5wcm9wZXJ0aWVzLnN0cm9rZUNvbG9yLHdlaWdodDpudWxsPT09KGE9ZSl8fHZvaWQgMD09PWE/dm9pZCAwOmEucHJvcGVydGllcy5zdHJva2VXaWR0aCxvcGFjaXR5Om51bGw9PT0obz1lKXx8dm9pZCAwPT09bz92b2lkIDA6by5wcm9wZXJ0aWVzLnN0cm9rZU9wYWNpdHl9fSxwb2ludFRvTGF5ZXI6ZnVuY3Rpb24oZSx0KXtyZXR1cm4icmFkaXVzImluIGUucHJvcGVydGllcz9ERy5jaXJjbGUodCxlLnByb3BlcnRpZXMucmFkaXVzKTpERy5tYXJrZXIodCx7aWNvbjpmdW5jdGlvbihlKXtyZXR1cm4gREcuZGl2SWNvbih7aHRtbDoiPGRpdiBjbGFzcz0nYnVsbGV0LW1hcmtlcicgc3R5bGU9J2JvcmRlci1jb2xvcjogIitlKyI7Jz48L2Rpdj4iLGNsYXNzTmFtZToib3ZlcnJpZGUtZGVmYXVsdCIsaWNvblNpemU6WzIwLDIwXSxpY29uQW5jaG9yOlsxMCwxMF19KX0oZS5wcm9wZXJ0aWVzLmNvbG9yKX0pfSxvbkVhY2hGZWF0dXJlOmZ1bmN0aW9uKGUsdCl7ZS5wcm9wZXJ0aWVzLmRlc2NyaXB0aW9uJiZ0LmJpbmRQb3B1cChhKGUucHJvcGVydGllcy5kZXNjcmlwdGlvbikse2Nsb3NlQnV0dG9uOiEwLGNsb3NlT25Fc2NhcGVLZXk6ITB9KSxlLnByb3BlcnRpZXMudGl0bGUmJnQuYmluZFRvb2x0aXAoYShlLnByb3BlcnRpZXMudGl0bGUpLHtwZXJtYW5lbnQ6ITAsb3BhY2l0eToxLGNsYXNzTmFtZToicGVybWFuZW50LXRvb2x0aXAifSl9fSkuYWRkVG8oZSl9KX0pKCdbeyJ0eXBlIjoiRmVhdHVyZSIsInByb3BlcnRpZXMiOnsidGl0bGUiOiJTVVJKUVNCTllYSnJaWFE9IiwiZGVzY3JpcHRpb24iOiIiLCJjb2xvciI6IiMwMjgxZjIiLCJ6SW5kZXgiOjEwMDAwMDAwMDB9LCJnZW9tZXRyeSI6eyJ0eXBlIjoiUG9pbnQiLCJjb29yZGluYXRlcyI6Wzc2LjkwNzIyNiw0My4yMzc5MjhdfSwiaWQiOjExOTF9XScsJ3sibGF0Ijo0My4yMzc5MjI0MzkyNDAyMzYsImxvbiI6NzYuOTA3NDA4MjM3NDU3MjksInpvb20iOjE4fScpPC9zY3JpcHQ+PHNjcmlwdCBhc3luYz0iIiB0eXBlPSJ0ZXh0L2phdmFzY3JpcHQiIHNyYz0iaHR0cHM6Ly93d3cuZ29vZ2xldGFnbWFuYWdlci5jb20vZ3RhZy9qcz9pZD1VQS0xNTg4NjYxNjgtMSI+PC9zY3JpcHQ+PHNjcmlwdCB0eXBlPSJ0ZXh0L2phdmFzY3JpcHQiPihmdW5jdGlvbihlKXtmdW5jdGlvbiB0KCl7ZGF0YUxheWVyLnB1c2goYXJndW1lbnRzKX13aW5kb3cuZGF0YUxheWVyPXdpbmRvdy5kYXRhTGF5ZXJ8fFtdLHQoImpzIixuZXcgRGF0ZSksdCgiY29uZmlnIixlKSx3aW5kb3cuZ3RhZz10fSkoJ1VBLTE1ODg2NjE2OC0xJyk8L3NjcmlwdD48L2JvZHk+"
+              )
+            </script>
+            <!-- <script type="text/javascript"  charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ae8TYQD21P8LaNqLcS9Xuo2pzsrzbe44Q&amp;width=1016&amp;height=684&amp;lang=ru_RU&amp;scroll=true"></script> -->
           </div>
         </div>
 
-        <div class="contact_end delivery_block_4">
-          <iframe id="map_43164501" frameborder="0" width="1162px" height="500px"
-            sandbox="allow-modals allow-forms allow-scripts allow-same-origin allow-popups allow-top-navigation-by-user-activation"></iframe>
-          <script type="text/javascript">
-            (function (e, t) {
-              var r = document.getElementById(e);
-              r.contentWindow.document.open(), r.contentWindow.document.write(atob(t)), r.contentWindow.document
-                .close()
-            })("map_43164501",
-              "PGJvZHk+PHN0eWxlPgogICAgICAgIGh0bWwsIGJvZHkgewogICAgICAgICAgICBtYXJnaW46IDA7CiAgICAgICAgICAgIHBhZGRpbmc6IDA7CiAgICAgICAgfQogICAgICAgIGh0bWwsIGJvZHksICNtYXAgewogICAgICAgICAgICB3aWR0aDogMTAwJTsKICAgICAgICAgICAgaGVpZ2h0OiAxMDAlOwogICAgICAgIH0KICAgICAgICAuYnVsbGV0LW1hcmtlciB7CiAgICAgICAgICAgIHdpZHRoOiAyMHB4OwogICAgICAgICAgICBoZWlnaHQ6IDIwcHg7CiAgICAgICAgICAgIGJveC1zaXppbmc6IGJvcmRlci1ib3g7CiAgICAgICAgICAgIGJhY2tncm91bmQtY29sb3I6ICNmZmY7CiAgICAgICAgICAgIGJveC1zaGFkb3c6IDAgMXB4IDNweCAwIHJnYmEoMCwgMCwgMCwgMC4yKTsKICAgICAgICAgICAgYm9yZGVyOiA0cHggc29saWQgIzAyODFmMjsKICAgICAgICAgICAgYm9yZGVyLXJhZGl1czogNTAlOwogICAgICAgIH0KICAgICAgICAucGVybWFuZW50LXRvb2x0aXAgewogICAgICAgICAgICBiYWNrZ3JvdW5kOiBub25lOwogICAgICAgICAgICBib3gtc2hhZG93OiBub25lOwogICAgICAgICAgICBib3JkZXI6IG5vbmU7CiAgICAgICAgICAgIHBhZGRpbmc6IDZweCAxMnB4OwogICAgICAgICAgICBjb2xvcjogIzI2MjYyNjsKICAgICAgICB9CiAgICAgICAgLnBlcm1hbmVudC10b29sdGlwOmJlZm9yZSB7CiAgICAgICAgICAgIGRpc3BsYXk6IG5vbmU7CiAgICAgICAgfQogICAgICAgIC5kZy1wb3B1cF9oaWRkZW5fdHJ1ZSB7CiAgICAgICAgICAgIGRpc3BsYXk6IGJsb2NrOwogICAgICAgIH0KICAgICAgICAubGVhZmxldC1jb250YWluZXIgLmxlYWZsZXQtcG9wdXAgLmxlYWZsZXQtcG9wdXAtY2xvc2UtYnV0dG9uIHsKICAgICAgICAgICAgdG9wOiAwOwogICAgICAgICAgICByaWdodDogMDsKICAgICAgICAgICAgd2lkdGg6IDIwcHg7CiAgICAgICAgICAgIGhlaWdodDogMjBweDsKICAgICAgICAgICAgZm9udC1zaXplOiAyMHB4OwogICAgICAgICAgICBsaW5lLWhlaWdodDogMTsKICAgICAgICB9CiAgICA8L3N0eWxlPjxkaXYgaWQ9Im1hcCI+PC9kaXY+PHNjcmlwdCB0eXBlPSJ0ZXh0L2phdmFzY3JpcHQiIHNyYz0iaHR0cHM6Ly9tYXBzLmFwaS4yZ2lzLnJ1LzIuMC9sb2FkZXIuanM/cGtnPWZ1bGwmYW1wO3NraW49bGlnaHQiPjwvc2NyaXB0PjxzY3JpcHQ+KGZ1bmN0aW9uKGUsdCl7dmFyIHI9SlNPTi5wYXJzZShlKSxuPUpTT04ucGFyc2UodCk7ZnVuY3Rpb24gYShlKXtyZXR1cm4gZGVjb2RlVVJJQ29tcG9uZW50KGF0b2IoZSkuc3BsaXQoIiIpLm1hcChmdW5jdGlvbihlKXtyZXR1cm4iJSIrKCIwMCIrZS5jaGFyQ29kZUF0KDApLnRvU3RyaW5nKDE2KSkuc2xpY2UoLTIpfSkuam9pbigiIikpfURHLnRoZW4oZnVuY3Rpb24oKXt2YXIgZT1ERy5tYXAoIm1hcCIse2NlbnRlcjpbbi5sYXQsbi5sb25dLHpvb206bi56b29tfSk7REcuZ2VvSlNPTihyLHtzdHlsZTpmdW5jdGlvbihlKXt2YXIgdCxyLG4sYSxvO3JldHVybntmaWxsQ29sb3I6bnVsbD09PSh0PWUpfHx2b2lkIDA9PT10P3ZvaWQgMDp0LnByb3BlcnRpZXMuZmlsbENvbG9yLGZpbGxPcGFjaXR5Om51bGw9PT0ocj1lKXx8dm9pZCAwPT09cj92b2lkIDA6ci5wcm9wZXJ0aWVzLmZpbGxPcGFjaXR5LGNvbG9yOm51bGw9PT0obj1lKXx8dm9pZCAwPT09bj92b2lkIDA6bi5wcm9wZXJ0aWVzLnN0cm9rZUNvbG9yLHdlaWdodDpudWxsPT09KGE9ZSl8fHZvaWQgMD09PWE/dm9pZCAwOmEucHJvcGVydGllcy5zdHJva2VXaWR0aCxvcGFjaXR5Om51bGw9PT0obz1lKXx8dm9pZCAwPT09bz92b2lkIDA6by5wcm9wZXJ0aWVzLnN0cm9rZU9wYWNpdHl9fSxwb2ludFRvTGF5ZXI6ZnVuY3Rpb24oZSx0KXtyZXR1cm4icmFkaXVzImluIGUucHJvcGVydGllcz9ERy5jaXJjbGUodCxlLnByb3BlcnRpZXMucmFkaXVzKTpERy5tYXJrZXIodCx7aWNvbjpmdW5jdGlvbihlKXtyZXR1cm4gREcuZGl2SWNvbih7aHRtbDoiPGRpdiBjbGFzcz0nYnVsbGV0LW1hcmtlcicgc3R5bGU9J2JvcmRlci1jb2xvcjogIitlKyI7Jz48L2Rpdj4iLGNsYXNzTmFtZToib3ZlcnJpZGUtZGVmYXVsdCIsaWNvblNpemU6WzIwLDIwXSxpY29uQW5jaG9yOlsxMCwxMF19KX0oZS5wcm9wZXJ0aWVzLmNvbG9yKX0pfSxvbkVhY2hGZWF0dXJlOmZ1bmN0aW9uKGUsdCl7ZS5wcm9wZXJ0aWVzLmRlc2NyaXB0aW9uJiZ0LmJpbmRQb3B1cChhKGUucHJvcGVydGllcy5kZXNjcmlwdGlvbikse2Nsb3NlQnV0dG9uOiEwLGNsb3NlT25Fc2NhcGVLZXk6ITB9KSxlLnByb3BlcnRpZXMudGl0bGUmJnQuYmluZFRvb2x0aXAoYShlLnByb3BlcnRpZXMudGl0bGUpLHtwZXJtYW5lbnQ6ITAsb3BhY2l0eToxLGNsYXNzTmFtZToicGVybWFuZW50LXRvb2x0aXAifSl9fSkuYWRkVG8oZSl9KX0pKCdbeyJ0eXBlIjoiRmVhdHVyZSIsInByb3BlcnRpZXMiOnsidGl0bGUiOiJTVVJKUVNCTllYSnJaWFE9IiwiZGVzY3JpcHRpb24iOiIiLCJjb2xvciI6IiMwMjgxZjIiLCJ6SW5kZXgiOjEwMDAwMDAwMDB9LCJnZW9tZXRyeSI6eyJ0eXBlIjoiUG9pbnQiLCJjb29yZGluYXRlcyI6Wzc2LjkwNzIyNiw0My4yMzc5MjhdfSwiaWQiOjExOTF9XScsJ3sibGF0Ijo0My4yMzc5MjI0MzkyNDAyMzYsImxvbiI6NzYuOTA3NDA4MjM3NDU3MjksInpvb20iOjE4fScpPC9zY3JpcHQ+PHNjcmlwdCBhc3luYz0iIiB0eXBlPSJ0ZXh0L2phdmFzY3JpcHQiIHNyYz0iaHR0cHM6Ly93d3cuZ29vZ2xldGFnbWFuYWdlci5jb20vZ3RhZy9qcz9pZD1VQS0xNTg4NjYxNjgtMSI+PC9zY3JpcHQ+PHNjcmlwdCB0eXBlPSJ0ZXh0L2phdmFzY3JpcHQiPihmdW5jdGlvbihlKXtmdW5jdGlvbiB0KCl7ZGF0YUxheWVyLnB1c2goYXJndW1lbnRzKX13aW5kb3cuZGF0YUxheWVyPXdpbmRvdy5kYXRhTGF5ZXJ8fFtdLHQoImpzIixuZXcgRGF0ZSksdCgiY29uZmlnIixlKSx3aW5kb3cuZ3RhZz10fSkoJ1VBLTE1ODg2NjE2OC0xJyk8L3NjcmlwdD48L2JvZHk+"
-            )
-          </script>
-          <!-- <script type="text/javascript"  charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ae8TYQD21P8LaNqLcS9Xuo2pzsrzbe44Q&amp;width=1016&amp;height=684&amp;lang=ru_RU&amp;scroll=true"></script> -->
-        </div>
+
+
+        <br><br><br>
       </div>
-
-
-
-    <br><br><br>
-    </div>
-    </div>
-    </div>
-    </div>
-    </div>
-    <div class="bg-bot  bg-bot_1">
-      <div class="main">
-        <div class="container_12">
-          <div class="wrapper">
-            <div class="bg-bot_1_wrapper">
+  </div>
+  </div>
+  </div>
+  </div>
+  <div class="bg-bot  bg-bot_1">
+    <div class="main">
+      <div class="container_12">
+        <div class="wrapper">
+          <div class="bg-bot_1_wrapper">
             <article class="bot_1_card">
               <div class="indent-right2">
                 <div class="bg-bot_text">
@@ -208,7 +217,7 @@
                 <a class="button" href="contact.html">посмотреть</a>
               </div>
             </article>
-            <article class="bot_1_card" >
+            <article class="bot_1_card">
               <h3 class="prev-indent-bot2">Мебель по параметрам</h3>
               <div class="wrapper">
                 <div class="grid_4 alpha">
@@ -228,12 +237,12 @@
               </div>
             </article>
           </div>
-          </div>
         </div>
       </div>
     </div>
+  </div>
   </section>
-</div>
+  </div>
   <!--==============================footer=================================-->
   <footer>
     <div class="main">
@@ -318,6 +327,8 @@
       });
     });
   </script>
+  <script src="js/mapdata.js"></script>
+  <script src="js/countrymap.js"></script>
   <script src="js/main.js"></script>
 </body>
 
