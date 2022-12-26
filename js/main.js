@@ -13,6 +13,94 @@ titleRow.classList.add('row');
 titleColumn.classList.add('col-md-12');
 titleH1.classList.add('page-title');
 const titleCopy = document.querySelector('.indent-left .prev-indent-bot');
+const titleCopy2 = document.querySelector('.lll .prev-indent-bot');
+let lineDrevo = document.createElement('div');
+lineDrevo.classList.add('line');
+let lineDrevoA = document.createElement('a');
+bg_bot_1 = document.querySelector('.bg-bot_1');
+lineDrevo.appendChild(lineDrevoA);
+console.log(lineDrevo);
+if (bg_bot_1 != null) {
+  bg_bot_1.innerHTML = `
+  <section class="content_prime">
+  <div class="content_index">
+    <div class="content_cards">
+      <div class="content_card _anim-items _anim-no-hide _active">
+        <a href="mebel.html">
+          <div class="content_card_img">
+            <img class="content_card_img_one" src="images/menu11.png" alt="">
+            <img class="content_card_img_two" src="images/menu1.png" alt="">
+          </div>
+          <div class="content_card_text">
+            <h4>Мебель для дома</h4>
+          </div>
+        </a>
+      </div>
+
+      <div class="content_card _anim-items _anim-no-hide _active">
+        <a href="pharmacy.html">
+          <div class="content_card_img">
+            <img class="content_card_img_one" src="images/menu2.png" alt="">
+            <img class="content_card_img_two" src="images/menu22.png" alt="">
+          </div>
+          <div class="content_card_text">
+            <h4>Оборудование для аптек</h4>
+          </div>
+        </a>
+      </div>
+      <div class="content_card _anim-items _anim-no-hide _active">
+        <a href="steklo.html">
+          <div class="content_card_img">
+            <img class="content_card_img_one" src="images/menu3.png" alt="">
+            <img class="content_card_img_two" src="images/menu33.png" alt="">
+
+          </div>
+          <div class="content_card_text">
+            <h4>Стеклянные витрины</h4>
+          </div>
+        </a>
+      </div>
+      <div class="content_card _anim-items _anim-no-hide _active">
+        <a href="ofisnaya-mebel.html">
+          <div class="content_card_img">
+            <img class="content_card_img_one" src="images/menu44.png" alt="">
+            <img class="content_card_img_two" src="images/menu4.png" alt="">
+          </div>
+          <div class="content_card_text">
+            <h4>Офисная мебель</h4>
+          </div>
+        </a>
+      </div>
+      <div class="content_card _anim-items _anim-no-hide _active">
+        <a href="mebel-butik.html">
+          <div class="content_card_img">
+            <img class="content_card_img_one" src="images/menu55.png" alt="">
+            <img class="content_card_img_two" src="images/menu5.png" alt="">
+          </div>
+          <div class="content_card_text">
+            <h4>Мебель для бутика</h4>
+          </div>
+        </a>
+      </div>
+      <div class="content_card _anim-items _anim-no-hide _active">
+        <a href="resepshn.html">
+          <div class="content_card_img">
+            <img class="content_card_img_one" src="images/menu6.png" alt="">
+            <img class="content_card_img_two" src="images/menu66.png" alt="">
+          </div>
+          <div class="content_card_text">
+            <h4>Ресепш, барные стойки</h4>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+  `;
+}
+// lineDrevoA.innerHTML = `<a href="catalog.html">Каталог</a> / ${titleCopy2.textContent}`;
+
+// listViewDiv.before(lineDrevo);
 
 let pageName = window.location.href.split('/').pop().split('#')[0].split('?')[0];
 function displayList(e) {
@@ -40,6 +128,7 @@ function displayList(e) {
       return price;
     };
     (i.innerHTML = `        
+<a href=${e.link}>
 <div class="product-container">
     <div class="product-image">
       <span class="hover-link"></span>
@@ -55,7 +144,7 @@ function displayList(e) {
         <div class="product-label">
           <div class="product-name">
             <h2>${e.title.slice(0, 13)}...</h2>
-            <p class="price">от 62 430 ₸</p>
+            <p class="price">от ${formatter(e.price)} ₸</p>
             <p>Кухонные гарнитуры</p>
           </div>
         </div>
@@ -78,11 +167,11 @@ function displayList(e) {
             </ul>
           </div>
         </div>
-      </div>
-    </a>
-</div>
+      </div></a>
+
       `),
       productRow.appendChild(i);
+      listViewDiv.appendChild(bg_bot_1)
   });
 }
 const body = document.querySelector('body'),
@@ -132,7 +221,6 @@ contact_slider &&
       centerMode: !0,
       variableWidth: !0,
       dots: !0,
-      // fade: true
     });
 if (slider_for !== null) {
   $('.slider-for').slick({
@@ -284,10 +372,597 @@ const linkBootstrap = document.createElement('link');
   (linkBootstrap.href = 'css/bootstrap.min.css'),
   head.appendChild(linkAwesome),
   head.appendChild(linkBootstrap);
-// ,
-// null !== header &&
-//   (header.innerHTML = `
-// `);
+
+null !== header &&
+  (header.innerHTML = `
+ <div class="header_wrapper">
+ <div class="menu_burger">
+   <div class="menu_burger_logo">
+     <a href="index.html">
+       <div>
+         <img src="images/mebelcenter2.png" alt="" />
+       </div>
+     </a>
+   </div>
+   <div class="menu_burger_number">
+     <a href="87273449900">+7 727 344 99 00</a>
+   </div>
+   <div class="menu_burger_sub">
+     <a class="opener"><span class="opener_burger">Opener</span></a>
+   </div>
+   <ul class="nav">
+     <div class="nav_menu_item">
+       <!-- <li>
+         <div>
+           <img src="images/menu1.svg" alt="">
+         </div>
+         <div> <a href="mebel.html">Мебель для дома</a></div>
+       </li> -->
+       <div class="accordions">
+         <div class="accordion">
+           <div class="accordion__slot_sub">
+             <div><img src="images/msub3.svg" alt=""></div>
+             <button class="accordion__button">Стеклянные витрины</button>
+           </div>
+           <div class="accordion__slot">
+             <div class="accordion__panel">
+               <p class="accordion-panel__content">
+                 <a href="kuhni.html">
+                   Островные витрины
+                 </a>
+               </p>
+               <p class="accordion-panel__content">
+                 <a href="prixozhie.html">
+                   Стеклянные витрины
+                 </a>
+               </p>
+               <p class="accordion-panel__content">
+                 <a href="prixozhie.html">
+                   Островные торговые модули
+                 </a>
+               </p>
+               <p class="accordion-panel__content">
+                 <a href="prixozhie.html">
+                   Стеклянные витрины
+                 </a>
+               </p>
+               <p class="accordion-panel__content">
+                 <a href="prixozhie.html">
+                   Островные витрины
+                 </a>
+               </p>
+               <p class="accordion-panel__content">
+                 <a href="prixozhie.html">
+                   Островные витрины
+                 </a>
+               </p>
+             </div>
+           </div>
+         </div>
+         <div class="accordion">
+           <div class="accordion__slot_sub">
+             <div><img src="images/msub5.svg" alt=""></div>
+             <button class="accordion__button">Мебель для бутика</button>
+           </div>
+           <div class="accordion__slot">
+             <div class="accordion__panel">
+               <p class="accordion-panel__content">
+                 <a href="kuhni.html">
+                   Одежда и аксессуары
+                 </a>
+               </p>
+               <p class="accordion-panel__content">
+                 <a href="prixozhie.html">
+                   Аксессуары, Парфюмерия, Косметика
+                 </a>
+               </p>
+               <p class="accordion-panel__content">
+                 <a href="prixozhie.html">
+                   Ювелирные изделия и бижутерия
+                 </a>
+               </p>
+               <p class="accordion-panel__content">
+                 <a href="prixozhie.html">
+                   Обувь и аксессуары
+                 </a>
+               </p>
+             </div>
+           </div>
+         </div>
+
+         <div class="accordion">
+           <div class="accordion__slot_sub">
+             <div><img src="images/msub2.svg" alt=""></div>
+             <button class="accordion__button">Оборудование для аптек</button>
+           </div>
+           <div class="accordion__slot">
+             <div class="accordion__panel">
+               <p class="accordion-panel__content">
+                 <a href="kuhni.html">
+                   Оборудование для аптеки Мегаполис
+                 </a>
+               </p>
+               <p class="accordion-panel__content">
+                 <a href="prixozhie.html">
+                   Оборудование для аптеки Грин
+                 </a>
+               </p>
+               <p class="accordion-panel__content">
+                 <a href="prixozhie.html">
+                   Оборудование для аптеки Массив
+                 </a>
+               </p>
+               <p class="accordion-panel__content">
+                 <a href="prixozhie.html">
+                   Оборудование для аптеки Глянец
+                 </a>
+               </p>
+               <p class="accordion-panel__content">
+                 <a href="prixozhie.html">
+                   Оборудование для аптеки Модерн
+                 </a>
+               </p>
+               <p class="accordion-panel__content">
+                 <a href="prixozhie.html">
+                   Оборудование для аптеки Премиум
+                 </a>
+               </p>
+             </div>
+           </div>
+         </div>
+
+         <div class="accordion">
+           <div class="accordion__slot_sub">
+             <div><img src="images/msub4.svg" alt=""></div>
+             <button class="accordion__button">Офисная мебель</button>
+           </div>
+           <div class="accordion__slot">
+             <div class="accordion__panel">
+               <p class="accordion-panel__content">
+                 <a href="kuhni.html">
+                   Офисная мебель Агат
+                 </a>
+               </p>
+               <p class="accordion-panel__content">
+                 <a href="prixozhie.html">
+                   Офисная мебель Аккорд
+                 </a>
+               </p>
+               <p class="accordion-panel__content">
+                 <a href="prixozhie.html">
+                   Офисная мебель Аксиома
+                 </a>
+               </p>
+               <p class="accordion-panel__content">
+                 <a href="prixozhie.html">
+                   Офисная мебель Блиц
+                 </a>
+               </p>
+               <p class="accordion-panel__content">
+                 <a href="prixozhie.html">
+                   Офисная мебель Формат
+                 </a>
+               </p>
+               <p class="accordion-panel__content">
+                 <a href="prixozhie.html">
+                   Офисная мебель Гамма
+                 </a>
+               </p>
+               <p class="accordion-panel__content">
+                 <a href="prixozhie.html">
+                   Офисная мебель Нортон
+                 </a>
+               </p>
+               <p class="accordion-panel__content">
+                 <a href="prixozhie.html">
+                   Офисная мебель Прего
+                 </a>
+               </p>
+               <p class="accordion-panel__content">
+                 <a href="prixozhie.html">
+                   Офисная мебель Смарт
+                 </a>
+               </p>
+               <p class="accordion-panel__content">
+                 <a href="prixozhie.html">
+                   Офисная мебель Спектр
+                 </a>
+               </p>
+               <p class="accordion-panel__content">
+                 <a href="prixozhie.html">
+                   Офисная мебель Статус
+                 </a>
+               </p>
+               <p class="accordion-panel__content">
+                 <a href="prixozhie.html">
+                   Офисная мебель Тандем
+                 </a>
+               </p>
+             </div>
+           </div>
+         </div>
+
+       </div>
+       <div class="accordion">
+         <div class="accordion__slot_sub">
+           <div><img src="images/msub6.svg" alt=""></div>
+           <button class="accordion__button">Ресепшн, барные стойки</button>
+         </div>
+         <div class="accordion__slot">
+           <div class="accordion__panel">
+             <p class="accordion-panel__content">
+               <a href="kuhni.html">
+                 Барные стойки
+               </a>
+             </p>
+             <p class="accordion-panel__content">
+               <a href="prixozhie.html">
+                 Ресепшн
+               </a>
+             </p>
+           </div>
+         </div>
+       </div>
+       <div class="accordion">
+         <div class="accordion__slot_sub">
+           <div><img src="images/msub1.svg" alt=""></div>
+           <button class="accordion__button">Мебель для дома</button>
+         </div>
+         <div class="accordion__slot">
+           <div class="accordion__panel">
+             <p class="accordion-panel__content">
+               <a href="kuhni.html">
+                 Кухни
+               </a>
+             </p>
+             <p class="accordion-panel__content">
+               <a href="prixozhie.html">
+                 Прихожие
+               </a>
+             </p>
+             <p class="accordion-panel__content">
+               <a href="prixozhie.html">
+                 Спальни
+               </a>
+             </p>
+             <p class="accordion-panel__content">
+               <a href="prixozhie.html">
+                 Детские
+               </a>
+             </p>
+             <p class="accordion-panel__content">
+               <a href="prixozhie.html">
+                 Гостиные
+               </a>
+             </p>
+             <p class="accordion-panel__content">
+               <a href="prixozhie.html">
+                 Шкафы и Гардеробные
+               </a>
+             </p>
+           </div>
+         </div>
+       </div>
+     </div>
+     <div class="menu_burger_nav_phone">
+       <div>
+         <i class="fa fa-phone"></i>
+       </div>
+       <div>
+         <a href="87273449900">+7 727 344 99 00</a>
+       </div>
+     </div>
+     <div class="menu_burger_nav_social">
+       <div class="menu_burger_nav_social_item">
+         <a href="https://www.instagram.com/idiamarket/">
+           <object type="image/svg+xml" data="images/inst.svg"></object>
+         </a>
+       </div>
+       <div class="menu_burger_nav_social_item">
+         <a href="https://t.me/Raihan_106">
+           <img src="images/telegran-icon.svg" alt="">
+         </a>
+       </div>
+       <div class="menu_burger_nav_social_item">
+         <a href="https://api.whatsapp.com/send/?phone=77015993322&text&app_absent=0">
+           <img src="images/whatsapp-icon.svg" alt="">
+         </a>
+       </div>
+       <div class="menu_burger_nav_social_item">
+         <a href="">
+           <img src="images/youtube-icon.svg" alt="">
+         </a>
+       </div>
+     </div>
+ </div>
+</div>
+
+<div class="header_menu_main">
+ <div class="main">
+   <div class="header_menu_main_wrapper">
+     <div class="header_menu_main_start">
+       <a href="index.html"><img src="images/mebelcenter2.svg" alt=""></a>
+     </div>
+     <div class="header_menu_main_end">
+       <a href="index.html">
+         <div class="header_menu_main_item">
+           Главная
+         </div>
+       </a>
+       <a href="catalog.html">
+         <div class="header_menu_main_item">
+           Каталог Товаров
+         </div>
+       </a>
+       <a href="dostavka.html">
+         <div class="header_menu_main_item">
+           Доставка
+         </div>
+       </a>
+       <a href="portfolio.html">
+         <div class="header_menu_main_item">
+           Наши работы
+         </div>
+       </a>
+       <a href="otzovik.php">
+         <div class="header_menu_main_item">
+           Отзывы
+         </div>
+       </a>
+       <a href="about-us.html">
+         <div class="header_menu_main_item">
+           О нас
+         </div>
+       </a>
+       <a href="contact.html">
+         <div class="header_menu_main_item">
+           Контакты
+         </div>
+       </a>
+     </div>
+
+   </div>
+ </div>
+</div>
+
+
+<div class="header_wrapper_bottom">
+ <div class="header_wrapper_bottom_inner">
+   <div class="header_wrapper_bottom_item">
+     <a href="index.html">
+       <div class="header_wrapper_bottom_item_img">
+         <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" preserveAspectRatio="xMidYMid meet"
+           viewBox="0 0 24 24">
+           <path fill="currentColor"
+             d="m20 8l-6-5.26a3 3 0 0 0-4 0L4 8a3 3 0 0 0-1 2.26V19a3 3 0 0 0 3 3h12a3 3 0 0 0 3-3v-8.75A3 3 0 0 0 20 8Zm-6 12h-4v-5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1Zm5-1a1 1 0 0 1-1 1h-2v-5a3 3 0 0 0-3-3h-2a3 3 0 0 0-3 3v5H6a1 1 0 0 1-1-1v-8.75a1 1 0 0 1 .34-.75l6-5.25a1 1 0 0 1 1.32 0l6 5.25a1 1 0 0 1 .34.75Z" />
+         </svg>
+       </div>
+       <div class="header_wrapper_bottom_item_text">
+         <p>Главная</p>
+       </div>
+     </a>
+   </div>
+   <div class="header_wrapper_bottom_item">
+     <a href="catalog.html">
+       <div class="header_wrapper_bottom_item_img">
+         <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" preserveAspectRatio="xMidYMid meet"
+           viewBox="0 0 24 24">
+           <path fill="currentColor"
+             d="M10 13H3a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h7a1 1 0 0 0 1-1v-7a1 1 0 0 0-1-1Zm-1 7H4v-5h5ZM21 2h-7a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h7a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1Zm-1 7h-5V4h5Zm1 4h-7a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h7a1 1 0 0 0 1-1v-7a1 1 0 0 0-1-1Zm-1 7h-5v-5h5ZM10 2H3a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h7a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1ZM9 9H4V4h5Z" />
+         </svg>
+       </div>
+       <div class="header_wrapper_bottom_item_text">
+         <p>Каталог</p>
+       </div>
+     </a>
+   </div>
+   <div class="header_wrapper_bottom_item">
+     <a href="dostavka.html">
+       <div class="header_wrapper_bottom_item_img">
+         <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" preserveAspectRatio="xMidYMid meet"
+           viewBox="0 0 24 24">
+           <path fill="currentColor"
+             d="M1 12.5v5a1 1 0 0 0 1 1h1a3 3 0 0 0 6 0h6a3 3 0 0 0 6 0h1a1 1 0 0 0 1-1v-12a3 3 0 0 0-3-3h-9a3 3 0 0 0-3 3v2H6a3 3 0 0 0-2.4 1.2l-2.4 3.2a.61.61 0 0 0-.07.14l-.06.11a1 1 0 0 0-.07.35Zm16 6a1 1 0 1 1 1 1a1 1 0 0 1-1-1Zm-7-13a1 1 0 0 1 1-1h9a1 1 0 0 1 1 1v11h-.78a3 3 0 0 0-4.44 0H10Zm-2 6H4l1.2-1.6a1 1 0 0 1 .8-.4h2Zm-3 7a1 1 0 1 1 1 1a1 1 0 0 1-1-1Zm-2-5h5v2.78a3 3 0 0 0-4.22.22H3Z" />
+         </svg>
+       </div>
+       <div class="header_wrapper_bottom_item_text">
+         <p>Доставка</p>
+       </div>
+     </a>
+   </div>
+   <div class="header_wrapper_bottom_item">
+     <a href="contact.html">
+       <div class="header_wrapper_bottom_item_img">
+
+         <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" preserveAspectRatio="xMidYMid meet"
+           viewBox="0 0 24 24">
+           <path fill="currentColor"
+             d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24c1.12.37 2.33.57 3.57.57c.55 0 1 .45 1 1V20c0 .55-.45 1-1 1c-9.39 0-17-7.61-17-17c0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1c0 1.25.2 2.45.57 3.57c.11.35.03.74-.25 1.02l-2.2 2.2z" />
+         </svg>
+       </div>
+       <div class="header_wrapper_bottom_item_text">
+         <p>Контакты</p>
+       </div>
+     </a>
+   </div>
+ </div>
+</div>
+
+<div class="header_main_bottom">
+ <div class="main">
+   <div class="header_main_bottom_inner">
+     <div class="header_main_bottom_start">
+       <div class="header_menu_main_burger">
+         <section class="top-nav">
+           <input id="menu-toggle" type="checkbox" />
+           <label class='menu-button-container' for="menu-toggle">
+             <div class='menu-button'></div>
+
+           </label>
+           <p class="top-nav_text"> Каталог</p>
+           <ul class="menu">
+             <div class="header_menu_main_burger_wrapper">
+               <div class="header_menu_main_burger_inner">
+                 <div class="header_menu_main_burger_item">
+                   <h3>Мебель для дома</h3>
+                   <div class="header_menu_main_burger_content">
+                     <div class="header_menu_main_burger_link">
+                       <a href="kuhni.html">Кухни</a>
+                     </div>
+                     <div class="header_menu_main_burger_link">
+                       <a href="prixozhie.html">Прихожие</a>
+                     </div>
+                     <div class="header_menu_main_burger_link">
+                       <a href="spalni.html">Спальни</a>
+                     </div>
+                     <div class="header_menu_main_burger_link">
+                       <a href="detskie.html">Детские</a>
+                     </div>
+                     <div class="header_menu_main_burger_link">
+                       <a href="gostinye.html">Гостиные</a>
+                     </div>
+                     <div class="header_menu_main_burger_link">
+                       <a href="shkafy.html">Купе, Шкафы и Гардеробные</a>
+                     </div>
+                   </div>
+                 </div>
+                 <div class="header_menu_main_burger_item">
+                   <h3>Оборудование для аптек</h3>
+                   <div class="header_menu_main_burger_content">
+                     <div class="header_menu_main_burger_link">
+                       <a href="megapolis-apteka.html">Мебель для аптеки Мегаполис</a>
+                     </div>
+                     <div class="header_menu_main_burger_link">
+                       <a href="green-apteka.html">Оборудование для аптеки Грин</a>
+                     </div>
+                     <div class="header_menu_main_burger_link">
+                       <a href="massiv-apteka.html">Оборудование для аптеки Массив</a>
+                     </div>
+                     <div class="header_menu_main_burger_link">
+                       <a href="glianec-apteka.html">Оборудование для аптеки Глянец</a>
+                     </div>
+                     <div class="header_menu_main_burger_link">
+                       <a href="modern-apteka.html">Оборудование для аптеки Модерн</a>
+                     </div>
+                     <div class="header_menu_main_burger_link">
+                       <a href="premium-apteka.html">Оборудование для аптеки Премиум</a>
+                     </div>
+                   </div>
+                 </div>
+
+                 <div class="header_menu_main_burger_item">
+                   <h3>Офисная мебель</h3>
+                   <div class="header_menu_main_burger_content">
+                     <div class="header_menu_main_burger_link">
+                       <a href="agat.html">Офисная мебель Агат</a>
+                     </div>
+                     <div class="header_menu_main_burger_link">
+                       <a href="akkord.html">Офисная мебель Аккорд</a>
+                     </div>
+                     <div class="header_menu_main_burger_link">
+                       <a href="aksioma.html">Офисная мебель Аксиома</a>
+                     </div>
+                     <div class="header_menu_main_burger_link">
+                       <a href="blic.html">Офисная мебель Блиц</a>
+                     </div>
+                     <div class="header_menu_main_burger_link">
+                       <a href="format.html">Офисная мебель Формат</a>
+                     </div>
+                     <div class="header_menu_main_burger_link">
+                       <a href="gamma.html">Офисная мебель Гамма</a>
+                     </div>
+                     <div class="header_menu_main_burger_link">
+                       <a href="norton.html">Офисная мебель Нортон</a>
+                     </div>
+                     <div class="header_menu_main_burger_link">
+                       <a href="prego.html">Офисная мебель Прего</a>
+                     </div>
+                     <div class="header_menu_main_burger_link">
+                       <a href="smart.html">Офисная мебель Смарт</a>
+                     </div>
+                     <div class="header_menu_main_burger_link">
+                       <a href="spektr.html">Офисная мебель Спектр</a>
+                     </div>
+                     <div class="header_menu_main_burger_link">
+                       <a href="status.html">Офисная мебель Статус</a>
+                     </div>
+                     <div class="header_menu_main_burger_link">
+                       <a href="tandem.html">Офисная мебель Тандем</a>
+                     </div>
+                   </div>
+                 </div>
+                 <div class="header_menu_main_burger_item">
+                   <h3>Мебель для бутика</h3>
+                   <div class="header_menu_main_burger_content">
+                     <div class="header_menu_main_burger_link">
+                       <a href="odejda.html">Одежда и аксессуары</a>
+                     </div>
+                     <div class="header_menu_main_burger_link">
+                       <a href="accessories.html">Аксессуары, Парфюмерия, Косметика</a>
+                     </div>
+                     <div class="header_menu_main_burger_link">
+                       <a href="jeweler.html">Ювелирные изделия и бижутерия</a>
+                     </div>
+                     <div class="header_menu_main_burger_link">
+                       <a href="obuv.html">Обувь и аксессуары</a>
+                     </div>
+                   </div>
+                 </div>
+
+               </div>
+
+             </div>
+           </ul>
+         </section>
+       </div>
+     </div>
+     <div class="header_main_bottom_center">
+       <div class="searchLogParent searchLogParentFeatured">
+         <div class="search_log">
+           <div class="sample eight search-box">
+             <div class="search_log_inner">
+               <div class="search_log_icon search-btn search-btn2">
+                 <i class="fa fa-search"></i>
+               </div>
+               <input type="text" name="" autocomplete="off" id="txtSearch" placeholder="Введите запрос..."
+                 class="sampleSearch search-txt">
+               <input type="text" name="" autocomplete="off" id="txtSearch2" placeholder="Введите запрос..."
+                 class="sampleSearch sampleSearch2 search-txt">
+             </div>
+             <div>
+               <button type="submit" class="btn btn-search search-btn search-btn2">
+                 <i class="fa-solid fa-arrow-right"></i>
+               </button>
+             </div>
+           </div>
+         </div>
+       </div>
+     </div>
+     <div class="header_main_bottom_end">
+       <a href="tel:87273449900">
+         <a>
+           <div class="coccoc-alo-phone coccoc-alo-green coccoc-alo-show">
+             <div class="coccoc-alo-ph-circle"></div>
+             <div class="coccoc-alo-ph-circle-fill"></div>
+             <div class="coccoc-alo-ph-img-circle"></div>
+           </div>
+         </a>
+         <div class="header_main_bottom_end_phone">
+           <div>
+             <p>Алматы:</p>
+           </div>
+           <div>
+             <a href="tel:87273449900">+7 (727) 344 99 00</a>
+           </div>
+         </div>
+       </a>
+     </div>
+   </div>
+ </div>
+
+
+</div>
+`);
 
 null !== footer &&
   ((footer.className = 'footer'),
@@ -475,11 +1150,13 @@ const productData6 = [
       link: 'modern-gos.html',
       img: 'images/modern-gos.jpg',
       title: 'Модерн',
+      price: 44840,
     },
     {
       link: 'classic-gos.html',
       img: 'images/classic-gos.jpg',
       title: 'Классика',
+      price: 124000,
     },
   ],
   productData7 = [
@@ -487,46 +1164,55 @@ const productData6 = [
       link: 'djaz-gos.html',
       img: 'images/thumbs/gostinye/dja.jpeg',
       title: 'Гостиная Джаз',
+      price: 44840,
     },
     {
       link: 'elizabet.html',
       img: 'images/thumbs/gostinye/eliz.jpg',
       title: 'Гостиная Элизабет',
+      price: 48960,
     },
     {
       link: 'palermo.html',
       img: 'images/thumbs/gostinye/pal.jpeg',
       title: 'Гостиная Палермо',
+      price: 42950,
     },
     {
       link: 'sonata.html',
       img: 'images/thumbs/gostinye/son.jpg',
       title: 'Гостиная Соната',
+      price: 44850,
     },
     {
       link: 'granada.html',
       img: 'images/thumbs/gostinye/gra.jpg',
       title: 'Гостиная Гранада',
+      price: 38450,
     },
     {
       link: 'lozanna.html',
       img: 'images/thumbs/gostinye/loz.jpg',
       title: 'Гостиная Лозанна',
+      price: 38560,
     },
     {
       link: 'karlino.html',
       img: 'images/thumbs/gostinye/kar.jpg',
       title: 'Гостиная Карлино',
+      price: 41960,
     },
     {
       link: 'fortuna.html',
       img: 'images/thumbs/gostinye/for.jpeg',
       title: 'Гостиная Фортуна',
+      price: 33560,
     },
     {
       link: 'bodego.html',
       img: 'images/thumbs/gostinye/bod.jpg',
       title: 'Гостиная Бодега',
+      price: 42640,
     },
   ],
   productData8 = [
@@ -534,31 +1220,37 @@ const productData6 = [
       link: 'savanna.html',
       img: 'images/thumbs/gostinye/sav.jpeg',
       title: 'Гостиная Саванна',
+      price: 124000,
     },
     {
       link: 'elika.html',
       img: 'images/thumbs/gostinye/elik.jpg',
       title: 'Гостиная Элика',
+      price: 124000,
     },
     {
       link: 'valencia.html',
       img: 'images/thumbs/gostinye/val.jpg',
       title: 'Гостиная Валенсия',
+      price: 124000,
     },
     {
       link: 'veskona.html',
       img: 'images/thumbs/gostinye/ves.jpg',
       title: 'Гостиная Вескона',
+      price: 124000,
     },
     {
       link: 'elza.html',
       img: 'images/thumbs/gostinye/elza.jpg',
       title: 'Гостиная Эльза',
+      price: 124000,
     },
     {
       link: 'grace.html',
       img: 'images/thumbs/gostinye/grace.jpg',
       title: 'Гостиная Грейс',
+      price: 124000,
     },
   ],
   productData9 = [
@@ -566,11 +1258,13 @@ const productData6 = [
       link: 'shkaf.html',
       img: 'images/shkaf.jpg',
       title: 'Шкафы',
+      price: 77120,
     },
     {
       link: 'garderob.html',
       img: 'images/garderob.jpg',
       title: 'Гардеробные',
+      price: 107630,
     },
   ],
   productData10 = [
@@ -578,46 +1272,55 @@ const productData6 = [
       link: 'arena-shkaf.html',
       img: 'images/thumbs/shkafy/are.jpg',
       title: 'Шкаф Арена',
+      price: 77120,
     },
     {
       link: 'elika-shkaf.html',
       img: 'images/thumbs/shkafy/eli.jpg',
       title: 'Шкаф – купе Элика',
+      price: 79860,
     },
     {
       link: 'gvarneri-shkaf.html',
       img: 'images/thumbs/shkafy/gva.jpg',
       title: 'Шкаф – купе Гварнери',
+      price: 77860,
     },
     {
       link: 'norton-shkaf.html',
       img: 'images/thumbs/shkafy/nor.jpg',
       title: 'Шкаф Нортон',
+      price: 76850,
     },
     {
       link: 'ringo-shkaf.html',
       img: 'images/thumbs/shkafy/rin.jpg',
       title: 'Шкаф – купе Ринго',
+      price: 78560,
     },
     {
       link: 'smart-shkaf.html',
       img: 'images/thumbs/shkafy/sma.png',
       title: 'Шкаф Смарт',
+      price: 78120,
     },
     {
       link: 'snejana-shkaf.html',
       img: 'images/thumbs/shkafy/sne.jpg',
       title: 'Шкаф Снежана',
+      price: 74230,
     },
     {
       link: 'toronto-shkaf.html',
       img: 'images/thumbs/shkafy/tor.jpg',
       title: 'Шкаф Торонто',
+      price: 72680,
     },
     {
       link: 'varis-shkaf.html',
       img: 'images/thumbs/shkafy/var.jpg',
       title: 'Шкаф Варис',
+      price: 78230,
     },
   ],
   productData11 = [
@@ -625,31 +1328,37 @@ const productData6 = [
       link: 'ampir.html',
       img: 'images/thumbs/garderob/amp.jpg',
       title: 'Гардеробная Ампир',
+      price: 107630,
     },
     {
       link: 'torino.html',
       img: 'images/thumbs/garderob/tor.JPG',
       title: 'Гардеробная Торино',
+      price: 96850,
     },
     {
       link: 'premium-gar.html',
       img: 'images/thumbs/garderob/pre.jpg',
       title: 'Гардеробная Премиум',
+      price: 94560,
     },
     {
       link: 'roskosh.html',
       img: 'images/thumbs/garderob/ros.jpg',
       title: 'Гардеробная Роскошь',
+      price: 108520,
     },
     {
       link: 'armadio.html',
       img: 'images/thumbs/garderob/arm.jpg',
       title: 'Гардеробная Армадио',
+      price: 109560,
     },
     {
       link: 'vitra.html',
       img: 'images/thumbs/garderob/vit.jpg',
       title: 'Гардеробная Витра',
+      price: 100120,
     },
   ],
   productData12 = [
@@ -924,25 +1633,25 @@ productData19 = [
   {
     link: 'odejda.html',
     img: 'images/odejda.jpg',
-    price: 0,
+    price: 53260,
     title: 'Одежда и аксессуары',
   },
   {
     link: 'accessories.html',
     title: 'Аксессуары, Парфюмерия, Косметика',
-    price: 0,
+    price: 63960,
     img: 'images/kosmetika.jpg',
   },
   {
     link: 'jeweler.html',
-    title: 'Островные торговые модули',
-    price: 0,
+    title: 'Ювелирные изделия и бижутерия',
+    price: 92320,
     img: 'images/thumbs/steklo/3.jpg',
   },
   {
     link: 'obuv.html',
     title: 'Обувь и аксессуары',
-    price: 0,
+    price: 54230,
     img: 'images/obuv.jpg',
   },
 ];
@@ -1065,13 +1774,13 @@ productData22 = [
     link: 'bar.html',
     title: 'Барные стойки',
     img: 'images/bar.jpg',
-    price: 0,
+    price: 88520,
   },
   {
     link: 'reception.html',
     title: 'Ресепшн',
     img: 'images/reception.jpg',
-    price: 0,
+    price: 63590,
   },
 ];
 productData23 = [
@@ -1079,11 +1788,13 @@ productData23 = [
     link: 'modern.html',
     title: 'Модерн',
     img: 'images/modern.jpg',
+    price: 62430,
   },
   {
     link: 'classic.html',
     title: 'Классика',
     img: 'images/classic.jpg',
+    price: 94680,
   },
 ];
 productData24 = [
@@ -1296,63 +2007,63 @@ productData27 = [
     link: 'katrin-spalni.html',
     title: 'Спальный гарнитур Катрин',
     img: 'images/thumbs/spalni/kat.jpg',
-    price: 0,
+    price: 54850,
   },
   {
     link: 'milana.html',
     title: 'Спальный гарнитур Милана',
     img: 'images/thumbs/spalni/mil.jpeg',
-    price: 0,
+    price: 64780,
   },
   {
     link: 'naomi.html',
     title: 'Спальный гарнитур Наоми',
     img: 'images/thumbs/spalni/nao.jpeg',
-    price: 0,
+    price: 62580,
   },
   {
     link: 'san-remo.html',
     title: 'Спальный гарнитур Сан-Ремо',
     img: 'images/thumbs/spalni/san.jpg',
-    price: 0,
+    price: 67560,
   },
 
   {
     link: 'ravenna.html',
     title: 'Спальный гарнитур Равенна',
     img: 'images/thumbs/spalni/rav.jpg',
-    price: 0,
+    price: 59630,
   },
   {
     link: 'nicole.html',
     title: 'Спальный гарнитур Николь',
     img: 'images/thumbs/spalni/nic.jpg',
-    price: 0,
+    price: 60960,
   },
   {
     link: 'sonata-spalni.html',
     title: 'Спальный гарнитур Соната',
     img: 'images/thumbs/spalni/son.jpeg',
-    price: 0,
+    price: 124000,
   },
 
   {
     link: 'tokio.html',
     title: 'Спальный гарнитур Токио',
     img: 'images/thumbs/spalni/tok.jpeg',
-    price: 0,
+    price: 66930,
   },
   {
     link: 'valencia-spalni.html',
     title: 'Спальный гарнитур Валенсия',
     img: 'images/thumbs/spalni/val.jpg',
-    price: 0,
+    price: 69820,
   },
   {
     link: 'vegas.html',
     title: 'Спальный гарнитур Вегас',
     img: 'images/thumbs/spalni/vio.jpeg',
-    price: 0,
+    price: 69820,
   },
 ];
 productData28 = [
@@ -1360,70 +2071,115 @@ productData28 = [
     link: 'delta.html',
     title: 'Детский гарнитур Дельта',
     img: 'images/thumbs/detskie/del.jpg',
+    price: 45820,
   },
   {
     link: 'liberty.html',
     title: 'Детский гарнитур Либерти',
     img: 'images/thumbs/detskie/lib.png',
+    price: 47630,
   },
   {
     link: 'massiv.html',
     title: 'Детский гарнитур Массив',
     img: 'images/thumbs/detskie/mas.png',
+    price: 46960,
   },
 
   {
     link: 'nov-mal.html',
     title: 'Мебель для новорожденных',
     img: 'images/thumbs/detskie/nov_mal.jpg',
+    price: 50760,
   },
   {
     link: 'orion.html',
     title: 'Детский гарнитур Орион',
     img: 'images/thumbs/detskie/ori.jpg',
+    price: 51630,
   },
   {
     link: 'princess.html',
     title: 'Детский гарнитур Принцесса',
     img: 'images/thumbs/detskie/pri.jpg',
+    price: 52960,
   },
   {
     link: 'provance.html',
     title: 'Детский гарнитур Прованс',
     img: 'images/thumbs/detskie/pro.png',
+    price: 54360,
   },
   {
     link: 'ringo.html',
     title: 'Детский гарнитур Ринго',
     img: 'images/thumbs/detskie/rin.png',
+    price: 51630,
   },
   {
     link: 'snejana.html',
     title: 'Детский гарнитур Снежана',
     img: 'images/thumbs/detskie/sne.jpg',
+    price: 48630,
   },
   {
     link: 'sonia.html',
     title: 'Детский гарнитур Соня',
     img: 'images/thumbs/detskie/son.png',
+    price: 49530,
   },
 
   {
     link: 'teenager.html',
     title: 'Детский гарнитур Тинейджер',
     img: 'images/thumbs/detskie/tee.jpg',
+    price: 58620,
   },
   {
     link: 'urban.html',
     title: 'Детский гарнитур Урбан',
     img: 'images/thumbs/detskie/urb.jpg',
+    price: 57980,
   },
 ];
 productData29 = [
   {
-    link: '',
-    title: '',
-    img: '',
+    link: 'kuhni.html',
+    title: 'Кухни',
+    price: 62430,
+    img: 'images/pr1.jpg',
+  },
+  {
+    link: 'prixozhie.html',
+    title: 'Кухни',
+    price: 85320,
+    img: 'images/img5.jpg',
+  },
+  {
+    link: 'spalni.html',
+    title: 'Спальни',
+    price: 59860,
+    img: 'images/img3.jpg',
+  },
+  {
+    link: 'detskie.html',
+    title: 'Детские',
+    price: 45820,
+    img: 'images/img4.jpg',
+  },
+
+  {
+    link: 'gostinye.html',
+    title: 'Гостиные',
+    price: 45820,
+    img: 'images/img2.jpg',
+  },
+
+  {
+    link: 'shkafy.html',
+    title: 'Шкаф-купе, Гардеробная',
+    price: 77120,
+    img: 'images/img7.jpg',
   },
 ];
 
@@ -1510,6 +2266,9 @@ switch (pageName) {
     break;
   case 'detskie.html':
     displayList(productData28);
+    break;
+  case 'mebel.html':
+    displayList(productData29);
     break;
 }
 

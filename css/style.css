@@ -618,7 +618,7 @@ h1 span {
 #content {
   max-width: 100%;
   height: auto;
-  margin-bottom: 30px;
+  /* margin-bottom: 30px; */
   margin-top: 30px;
   padding: 0;
   position: relative;
@@ -885,7 +885,7 @@ ul.thumbs {
 }
 
 ul.thumbs li {
-  height: 140px;
+  height: 137px;
   max-width: 100%;
   float: left;
   margin: 0 20px 20px 0;
@@ -896,7 +896,7 @@ ul.thumbs li {
 
 ul.thumbs li img {
   border: none;
-  max-width: 160px !important;
+  max-width: 150px !important;
   height: auto;
 }
 
@@ -4986,9 +4986,9 @@ input:focus-visible {
   padding-bottom: 90px;
   padding-top: 150px;
   /* background: linear-gradient(to right, #4e54c8, #49a09d); */
-  background: url(/images/contactBg2222.png) right;
-  background-size: cover;
-  background-position: 0px -150px;
+  background: url('../images/contactBg33.jpg') ;
+  background-repeat:no-repeat;
+  background-position: 0px -80px;
 }
 
 .contact_end {
@@ -5262,6 +5262,7 @@ canvas {
 .animatedBlockBg {
   display: none;
 }
+
 .content_index {
   width: 75%;
   margin: 60px auto;
@@ -6539,6 +6540,7 @@ hr {
   position: relative;
   /* letter-spacing: 1px; */
   /* font-weight: 600; */
+  padding-left: 0px;
 }
 
 .accordion__button:hover {
@@ -6558,7 +6560,8 @@ hr {
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 512'%3E%3Cpath d='M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z'/%3E%3C/svg%3E");
+  background-image: url("../images/arrowMain.svg");
+  fill: #fff;
 }
 
 .accordion__button-active::after {
@@ -6599,16 +6602,48 @@ hr {
   height: 1px;
   display: block;
   border-bottom: 1px solid #dbdbdb61;
-  width: 99%;
+  width: 98%;
 }
-.accordion-panel__content::after {
+
+.accordion__panel-active .accordion-panel__content::after {
   content: "";
   height: 1px;
   display: block;
   border-bottom: 1px solid #dbdbdb61;
-  width: 99%;
+  width: 97%;
+  left: 18px;
+  position: absolute;
+  margin-top: 6px;
+  transition: .9 linear;
 }
 
+.accordion-panel__content:last-child::after {
+  border: none
+}
+
+.accordion__button-active .accordion__slot_sub::after {
+  content: "";
+  border: 0;
+}
+
+.accordion__slot_sub {
+  display: flex;
+  align-items: center;
+}
+
+.accordion__button-active {
+  color: #eea849;
+}
+
+.accordion__button-active::after {
+  background-image: url(../images/arrowMain1.svg);
+}
+#content .bg-bot{
+  margin: 0px;
+  padding: 0px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
 @media (min-width: 1440px) {
   .Picture-wrap {
     width: 24%;
@@ -8312,6 +8347,25 @@ hr {
 }
 
 @media screen and (max-width: 990px) {
+  .nav {
+    overflow: scroll;
+  }
+
+  .b4_block {
+    background-size: 125%;
+    background-position: 45% 47%;
+  }
+
+  .activeBg::after {
+    content: "";
+    display: block;
+    border-bottom: 1px solid #dbdbdb61;
+    height: 30px;
+    width: 100%;
+    position: absolute;
+    bottom: 4px;
+  }
+
   .Pictures-box_slider .slick-prev {
     left: 86.3% !important;
   }
@@ -9314,13 +9368,13 @@ hr {
     padding-left: 10px;
   }
 
-  .nav_menu_item::after {
+  /* .nav_menu_item::after {
     content: "";
     height: 1px;
     display: block;
     border-bottom: 1px solid #dbdbdb61;
     width: 99%;
-  }
+  } */
 
   .menu_burger .nav a {
     display: block;
@@ -10189,6 +10243,32 @@ hr {
 }
 
 @media screen and (max-width: 675px) {
+  .main_slider_adaptive_base {
+    margin-top: 80px;
+  }
+
+  .main_slider_adaptive_base .slick-dots {
+    bottom: -30px;
+  }
+
+  .main_slider_adaptive_base .slick-dotted.slick-slider {
+    margin-bottom: -13px;
+  }
+
+  .accordion__slot_sub {
+    padding: 0 9px;
+  }
+
+  .accordion__slot::after {
+    content: "";
+    height: 1px;
+    display: block;
+    border-bottom: 1px solid #dbdbdb61;
+    width: 93%;
+    position: absolute;
+    left: 12px;
+  }
+
   h1.page-title {
     margin-top: 60px;
     font-size: 25px;
@@ -11005,6 +11085,10 @@ hr {
 @media screen and (max-width: 441px) {
   .main_slider_adaptive_base {
     margin-bottom: 75px;
+  }
+
+  .main_slider_adaptive_base .slick-dotted.slick-slider {
+    margin-bottom: -40px;
   }
 
   .thumbnail-image {
