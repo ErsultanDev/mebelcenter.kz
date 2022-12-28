@@ -6005,7 +6005,7 @@ fieldset:disabled .btn {
     word-wrap: break-word
 }
 
-.modal {
+/* .modal {
     --bs-modal-zindex: 1055;
     --bs-modal-width: 500px;
     --bs-modal-padding: 1rem;
@@ -6037,7 +6037,7 @@ fieldset:disabled .btn {
     overflow-x: hidden;
     overflow-y: auto;
     outline: 0
-}
+} */
 
 .modal-dialog {
     position: relative;
@@ -6084,7 +6084,7 @@ fieldset:disabled .btn {
     min-height: calc(100% - var(--bs-modal-margin) * 2)
 }
 
-.modal-content {
+/* .modal-content {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -6096,7 +6096,7 @@ fieldset:disabled .btn {
     border: var(--bs-modal-border-width) solid var(--bs-modal-border-color);
     border-radius: var(--bs-modal-border-radius);
     outline: 0
-}
+} */
 
 .modal-backdrop {
     --bs-backdrop-zindex: 1050;
@@ -6140,11 +6140,11 @@ fieldset:disabled .btn {
     line-height: var(--bs-modal-title-line-height)
 }
 
-.modal-body {
+/* .modal-body {
     position: relative;
     flex: 1 1 auto;
     padding: var(--bs-modal-padding)
-}
+} */
 
 .modal-footer {
     display: flex;
@@ -6164,10 +6164,10 @@ fieldset:disabled .btn {
 }
 
 @media (min-width:576px) {
-    .modal {
+    /* .modal {
         --bs-modal-margin: 1.75rem;
         --bs-modal-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15)
-    }
+    } */
 
     .modal-dialog {
         max-width: var(--bs-modal-width);
@@ -9298,9 +9298,9 @@ fieldset:disabled .btn {
     border-top-left-radius: var(--bs-border-radius) !important
 }
 
-.visible {
+/* .visible {
     visibility: visible !important
-}
+} */
 
 .invisible {
     visibility: hidden !important
