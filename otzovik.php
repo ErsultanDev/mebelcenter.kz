@@ -403,7 +403,7 @@ outline: none;" type="submit" value="Отправить" ></div>';
     </div>
     </div>
     </div>
-    <div class="bg-bot">
+    <div class="bg-bot bg-bot_1">
       <div class="main">
         <div class="container_12">
           <div class="wrapper">
@@ -441,6 +441,7 @@ outline: none;" type="submit" value="Отправить" ></div>';
         </div>
       </div>
     </div>
+
   </section>
 </div>
   <!--==============================footer=================================-->
