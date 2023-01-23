@@ -4513,7 +4513,7 @@ input:focus-visible {
 }
 
 .slider-for .slick-slide img {
-  width: 114%;
+  width: 100%;
 }
 
 .header_main_bottom_inner {
@@ -5806,7 +5806,6 @@ hr {
 }
 
 .product-image {
-  /* padding: 20px; */
   height: 221px;
   position: relative;
   overflow: hidden;
@@ -5815,10 +5814,9 @@ hr {
 
 .product-link {
   position: absolute;
-  /* background: #fff; */
   width: 160px;
   height: 160px;
-  color: #fff;
+  color: #fff!important;
   border-radius: 50%;
   font-size: 20px;
   text-align: center;
