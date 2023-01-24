@@ -115,7 +115,10 @@ function displayList(e) {
 
   e.map((e) => {
     let i = document.createElement('div');
-    i.classList.add('col-md-3');
+    i.classList.add('col-md-4');
+    if (window.matchMedia('(min-width: 999px)').matches) {
+      i.classList.add('col-md-3');
+    }
     var formatter = function (priceSum) {
       let mn = 0;
       let price = priceSum.toString();
@@ -144,7 +147,7 @@ function displayList(e) {
       <div class="product-description">
         <div class="product-label">
           <div class="product-name">
-            <h2>${e.title.slice(0, 23)}  </h2>
+            <h2>${e.title}  </h2>
             <p class="price">от ${formatter(e.price)} ₸</p>
             <p>${e.title}</p>
           </div>
@@ -167,15 +170,16 @@ function displayList(e) {
               <li class="dark-blue"></li>
             </ul>
           </div>
-
         </div>
         </a>
         <div class="product_btn_wrapper">
-        <button id="fly" class="product_cart_button fly viewList_product_card add_item btn btn-large btn-primary" data-id="1" data-title="<a href=${e.link}>${e.title}</a>" data-price= "${e.price}"  
+        <button id="fly" class="product_cart_button fly viewList_product_card add_item btn btn-large btn-primary" data-id="1" data-title="<a href=${
+          e.link
+        }>${e.title}</a>" data-price= "${e.price}"  
         data-quantity="1" 
         data-img="${e.img}">
-                                      <img class="basket" src="">&nbsp; В корзину
-                                  </button>
+         <img class="basket" src="">&nbsp; В корзину
+          </button>
         </div>
       </div>
       
@@ -1756,6 +1760,12 @@ const productData6 = [
       img: 'images/resM1.jpg',
       price: 65480,
     },
+    {
+      link: 'kas-reception_magaz.html',
+      title: 'Кассовые стойки',
+      img: 'images/res00.jpg',
+      price: 65480,
+    },
   ];
 
 productData18 = [
@@ -1893,18 +1903,105 @@ productData20 = [
 ];
 productData21 = [
   {
-    link: 'agat.html',
-    title: 'Офисная мебель Агат',
-    img: 'images/thumbs/office/aga.jpg',
-    subtitle: 'Коллекция Агат',
-    price: 66960,
+    link: 'ofisnaya-mebel_personal.html',
+    title: 'Мебель для персонала',
+    img: 'images/thumbs/office/tan.jpg',
+    subtitle: 'Мебель для персонала',
+    price: 62350,
   },
   {
-    link: 'akkord.html',
-    title: 'Офисная мебель Аккорд',
-    img: 'images/thumbs/office/akk.jpg',
-    subtitle: 'Офисная мебель Аккорд',
-    price: 77850,
+    link: 'ofisnaya-mebel_ruko.html',
+    title: 'Мебель для руководителей',
+    img: 'images/ofNo2.jpg',
+    subtitle: 'Мебель для персонала',
+    price: 62350,
+  },
+
+  {
+    link: 'ofisnaya-mebel_open.html',
+    title: 'Рабочие станции Open space',
+    img: 'images/op01.jpg',
+    subtitle: 'Мебель для персонала',
+    price: 62350,
+  },
+  {
+    link: 'ofisnaya-mebel_char.html',
+    title: 'Мебель для переговорных',
+    img: 'images/p06-1.jpg',
+    subtitle: 'Мебель для персонала',
+    price: 62350,
+  },
+  {
+    link: 'ofisnaya-mebel_personal.html',
+    title: 'Офисные шкафы',
+    img: 'images/thumbs/office/tan.jpg',
+    subtitle: 'Мебель для персонала',
+    price: 62350,
+  },
+  {
+    link: 'reception.html',
+    title: 'Мебель для приемных',
+    img: 'images/thumbs/office/tan.jpg',
+    subtitle: 'Мебель для персонала',
+    price: 62350,
+  },
+  // {
+  //   link: 'agat.html',
+  //   title: 'Офисная мебель Агат',
+  //   img: 'images/thumbs/office/aga.jpg',
+  //   subtitle: 'Коллекция Агат',
+  //   price: 66960,
+  // },
+  // {
+  //   link: 'akkord.html',
+  //   title: 'Офисная мебель Аккорд',
+  //   img: 'images/thumbs/office/akk.jpg',
+  //   subtitle: 'Офисная мебель Аккорд',
+  //   price: 77850,
+  // },
+  // {
+  //   link: 'norton.html',
+  //   title: 'Офисная мебель Нортон',
+  //   img: 'images/thumbs/office/nor.jpg',
+  //   subtitle: 'Оборудование для аптеки Премиум',
+  //   price: 79630,
+  // },
+  // {
+  //   link: 'prego.html',
+  //   title: 'Офисная мебель Прего',
+  //   img: 'images/thumbs/office/pre.jpg',
+  //   subtitle: 'Оборудование для аптеки Премиум',
+  //   price: 82630,
+  // },
+  // {
+  //   link: 'smart.html',
+  //   title: 'Офисная мебель Смарт',
+  //   img: 'images/thumbs/office/sma.jpg',
+  //   subtitle: 'Оборудование для аптеки Премиум',
+  //   price: 88750,
+  // },
+  // {
+  //   link: 'spektr.html',
+  //   title: 'Офисная мебель Спектр',
+  //   img: 'images/thumbs/office/spe.jpg',
+  //   subtitle: 'Оборудование для аптеки Премиум',
+  //   price: 70950,
+  // },
+  // {
+  //   link: 'status.html',
+  //   title: 'Офисная мебель Статус',
+  //   img: 'images/thumbs/office/sta.jpg',
+  //   subtitle: 'Оборудование для аптеки Премиум',
+  //   price: 89860,
+  // },
+];
+productData21_1 = [
+  {
+    link: 'tandem.html',
+    title: 'Офисная мебель Тандем',
+    img: 'images/thumbs/office/tan.jpg',
+    subtitle: 'Оборудование для аптеки Премиум',
+    price: 62350,
   },
   {
     link: 'aksioma.html',
@@ -1920,7 +2017,6 @@ productData21 = [
     subtitle: 'Офисная мебель Аксиома',
     price: 87960,
   },
-
   {
     link: 'format.html',
     title: 'Офисная мебель Формат',
@@ -1935,50 +2031,85 @@ productData21 = [
     subtitle: 'Оборудование для аптеки Премиум',
     price: 81630,
   },
-  {
-    link: 'norton.html',
-    title: 'Офисная мебель Нортон',
-    img: 'images/thumbs/office/nor.jpg',
-    subtitle: 'Оборудование для аптеки Премиум',
-    price: 79630,
-  },
-  {
-    link: 'prego.html',
-    title: 'Офисная мебель Прего',
-    img: 'images/thumbs/office/pre.jpg',
-    subtitle: 'Оборудование для аптеки Премиум',
-    price: 82630,
-  },
-  {
-    link: 'smart.html',
-    title: 'Офисная мебель Смарт',
-    img: 'images/thumbs/office/sma.jpg',
-    subtitle: 'Оборудование для аптеки Премиум',
-    price: 88750,
-  },
-  {
-    link: 'spektr.html',
-    title: 'Офисная мебель Спектр',
-    img: 'images/thumbs/office/spe.jpg',
-    subtitle: 'Оборудование для аптеки Премиум',
-    price: 70950,
-  },
+];
+productData21_2 = [
   {
     link: 'status.html',
     title: 'Офисная мебель Статус',
     img: 'images/thumbs/office/sta.jpg',
-    subtitle: 'Оборудование для аптеки Премиум',
+    subtitle: 'Офисная мебель Статус',
     price: 89860,
   },
   {
-    link: 'tandem.html',
-    title: 'Офисная мебель Тандем',
-    img: 'images/thumbs/office/tan.jpg',
-    subtitle: 'Оборудование для аптеки Премиум',
-    price: 62350,
+    link: 'of_mebel_1.html',
+    title: 'Кабинет руководителя Brix Дуб',
+    img: 'images/ofNo.jpg',
+    subtitle: 'Кабинет руководителя Brix Дуб',
+    price: 89860,
+  },
+  {
+    link: 'of_mebel_2.html',
+    title: 'Кабинет руководителя Torino Дуб',
+    img: 'images/ofNo2.jpg',
+    subtitle: 'Кабинет руководителя Torino Дуб золотой/Венге Цаво',
+    price: 89860,
+  },
+
+  {
+    link: 'of_mebel_3.html',
+    title: 'Кабинет руководителя Nelson Дезира',
+    img: 'images/ofNo3.jpg',
+    subtitle: 'Кабинет руководителя Nelson Дезира темная/Антрацит',
+    price: 89860,
   },
 ];
 
+productData21_3 = [
+  {
+    link: 'op_mebel_1.html',
+    title: 'Офисная мебель Vita Дуб Сонома',
+    img: 'images/op01.jpg',
+    subtitle: 'Офисная мебель  Vita Дуб Сонома',
+    price: 89860,
+  },
+  {
+    link: 'op_mebel_2.html',
+    title: 'Офисная мебель  Sigma Светлый дуб',
+    img: 'images/op02.jpg',
+    subtitle: 'Офисная мебель  Sigma Светлый дуб',
+    price: 89860,
+  },
+  {
+    link: 'op_mebel_3.html',
+    title: 'Офисная мебель Sitara Древесина белая',
+    img: 'images/op3-1.jpg',
+    subtitle: 'Офисная мебель  Sitara Древесина белая',
+    price: 89860,
+  },
+];
+productData21_4 = [
+  {
+    link: 'p_mebel_1.html',
+    title: 'Столы для переговоров Multimeeting',
+    img: 'images/p04.jpg',
+    subtitle: 'Столы для переговоров Multimeeting',
+    price: 89860,
+  },
+  {
+    link: 'p_mebel_2.html',
+    title: 'Столы для переговоров Приоритет',
+    img: 'images/p05-1.jpg',
+    subtitle: 'Столы для переговоров Приоритет',
+    price: 89860,
+  },
+  {
+    link: 'p_mebel_3.html',
+    title: 'Столы для переговоров Lava Табак',
+    img: 'images/p06-1.jpg',
+    subtitle: ' Столы для переговоров Lava Табак',
+    price: 89860,
+  },
+];
 productData22 = [
   {
     link: 'bar.html',
@@ -2441,6 +2572,18 @@ switch (pageName) {
     break;
   case 'ofisnaya-mebel.html':
     displayList(productData21);
+    break;
+  case 'ofisnaya-mebel_personal.html':
+    displayList(productData21_1);
+    break;
+  case 'ofisnaya-mebel_ruko.html':
+    displayList(productData21_2);
+    break;
+  case 'ofisnaya-mebel_open.html':
+    displayList(productData21_3);
+    break;
+  case 'ofisnaya-mebel_char.html':
+    displayList(productData21_4);
     break;
   case 'resepshn.html':
     displayList(productData22);
