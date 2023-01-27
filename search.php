@@ -41,7 +41,7 @@ $(document).ready(function () {
       <div class="container_12">
         <div class="grid_13">
           <nav>
-           <ul class="menu"><li><a href="index.html">Главная</a></li><li><a href="catalog.html">Каталог Товаров</a></li><li><a href="dostavka.html">Доставка</a></li><li><a href="portfolio.html">Наши работы</a></li><li><a href="otzovik.php">Отзывы</a></li><li><a  href="about-us.html">О нас</a></li><li><a  href="contact.html">Контакты</a></li>
+           <ul class="menu"><li><a href="index.html">Главная</a></li><li><a href="catalog.html">Каталог Товаров</a></li><li><a href="dostavka.html">Доставка</a></li><li><a href="portfolio.html">Наши работы</a></li><li><a href="reviews.php">Отзывы</a></li><li><a  href="about-us.html">О нас</a></li><li><a  href="contact.html">Контакты</a></li>
           </nav>
         </div>
       </div>

@@ -217,7 +217,7 @@ if (isset($_SESSION["send"]) and $_SESSION["send"] != "") {    //вывод со
                 <li><a href="catalog.html">Каталог Товаров</a></li>
                 <li><a href="dostavka.html">Доставка</a></li>
                 <li><a href="portfolio.html">Наши работы</a></li>
-                <li><a class="active" href="otzovik.php">Отзывы</a></li>
+                <li><a class="active" href="reviews.php">Отзывы</a></li>
                 <li><a href="about-us.html">О нас</a></li>
                 <li><a href="contact.html">Контакты</a></li>
               </ul>
@@ -409,7 +409,7 @@ outline: none;" type="submit" value="Отправить" ></div>';
           <div class="wrapper">
             <article class="grid_4">
               <div class="indent-right2">
-                <div class="bg-bot_text">
+                <div class="bg-bot_text"> 
                   <h3 class="prev-indent-bot">Где купить</h3>
                   <p class="prev-indent-bot" style="font-size:26px;">корпусную мебель?</p>
                 </div>
@@ -418,7 +418,7 @@ outline: none;" type="submit" value="Отправить" ></div>';
               </div>
             </article>
 
-            <article class="grid_4">
+            <article class="grid_4"> 
               <h3 class="prev-indent-bot2">Мебель по параметрам</h3>
               <div class="wrapper">
                 <div class="grid_4 alpha">

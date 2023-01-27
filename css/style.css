@@ -5901,34 +5901,34 @@ hr {
   background-color: #c7c7c7;
   border-radius: 50%;
   padding: 12px;
-  margin: 5px  0px;
+  margin: 5px 0px;
 }
 
 .product-color li.blue {
   background-color: #8e3f1e;
   border-radius: 50%;
-  margin: 5px  0px;
+  margin: 5px 0px;
   padding: 12px;
 }
 
 .product-color li.green {
   background-color: #d6c7a6;
   border-radius: 50%;
-  margin: 5px  0px;
+  margin: 5px 0px;
   padding: 12px;
 }
 
 .product-color li.gray {
   background-color: #2a1915;
   border-radius: 50%;
-  margin: 5px  0px;
+  margin: 5px 0px;
   padding: 12px;
 }
 
 .product-color li.black {
   background-color: #734f38;
   border-radius: 50%;
-  margin: 5px  0px;
+  margin: 5px 0px;
   padding: 12px;
 }
 
@@ -8112,7 +8112,7 @@ button.toast-close-button {
   transition-duration: 0.5s;
   position: absolute;
   right: 155px;
-  bottom: 25px;
+  bottom: 59px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
@@ -8173,6 +8173,61 @@ button.toast-close-button {
 
 }
 
+.header_drevo {
+  position: relative;
+  /* margin-top: 30px; */
+  /* margin-left: 30px; */
+  padding-bottom: 20px;
+  /* background: #adadad; */
+}
+
+.header_drevo .main {
+  display: flex;
+}
+
+.header_drevo_link a {
+  /* position: absolute;
+  top: 1px;
+  margin-right: 2px;
+  font-size: 35px;
+  display: block; */
+  font-size: 17px;
+  color: #003;
+  --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-weight: 300;
+  cursor: pointer;
+}
+
+.header_drevo_link a:hover {
+  color: #ff9601 !important;
+  transition: .2s linear;
+}
+
+.header_drevo_link:last-child a {
+  color: #8e8e8e;
+}
+
+.header_drevo_link:first-child {
+  margin-left: 30px;
+}
+
+.header_drevo_arrow {
+  margin: 4px 15px;
+}
+
+.header_drevo_arrow p {
+  font-size: 30px;
+  line-height: 15px;
+}
+
+.header_drevo_arrow img {
+  width: 7px;
+}
+.into_basket{
+background:#fff!important;
+color:#0067c6!important;
+border:2px solid #0067c6!important;
+}
 @media all and (max-width: 240px) {
   #toast-container>div {
     padding: 8px 8px 8px 50px;
@@ -8670,7 +8725,7 @@ button.toast-close-button {
 .product_cart_button {
   padding: 15px 30px;
   margin: 0 auto;
-  width: 107%;
+  width: 105%;
   background: #0067c6;
   color: #fff;
   border: none;

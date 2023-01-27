@@ -12,14 +12,23 @@ productRow.classList.add('row');
 titleRow.classList.add('row');
 titleColumn.classList.add('col-md-12');
 titleH1.classList.add('page-title');
+
 const titleCopy = document.querySelector('.indent-left .prev-indent-bot');
 const titleCopy2 = document.querySelector('.lll .prev-indent-bot');
+// drevoTitle.innerHTML = `${titleCopy.textContent}`;
+
+// header_drevo_link = document.querySelector('.header_drevo_link');
+
+// console.log(header_drevo_link);
+
+// console.log(header_drevo_link);
 
 let lineDrevo = document.createElement('div');
 lineDrevo.classList.add('line');
 let lineDrevoA = document.createElement('a');
 bg_bot_1 = document.querySelector('.bg-bot_1');
 lineDrevo.appendChild(lineDrevoA);
+
 if (bg_bot_1 != null) {
   bg_bot_1.innerHTML = `
   <section class="content_prime">
@@ -804,7 +813,7 @@ null !== header &&
           </a>
         </div>
         <div>
-          <a href="otzovik.php">
+          <a href="reviews.php">
             <div class="header_menu_main_item">
               Отзывы
             </div>
@@ -870,7 +879,7 @@ null !== header &&
       </a>
     </div>
     <div class="header_wrapper_bottom_item">
-      <a href="otzovik.php">
+      <a href="reviews.php">
         <div class="header_wrapper_bottom_item_img">
           <img src="images/reviewsicon.svg" alt="">
         </div>
@@ -1106,9 +1115,36 @@ null !== header &&
         </a>
       </div>
     </div>
+    <div class="header_drevo">
+      <div class="main">
+        <div class="header_drevo_link">
+          <a onclick="history.back()">Главная</a>
+        </div>
+        <div class="header_drevo_arrow">
+          <img src="images/arrowRightBlack.svg" alt="">
+        </div>
+      </div>
+    </div>
   </div>
 </div>`);
 
+let header_drevo = document.querySelector('.header_drevo .main');
+
+drevoTitle = document.createElement('div');
+drevoTitleA = document.createElement('a');
+const titleLogic = titleCopy ? titleCopy.textContent : titleCopy2.textContent;
+drevoTitleA.innerHTML = `${titleLogic}`;
+window.addEventListener('DOMContentLoaded', () => {});
+
+drevoTitle.classList.add('header_drevo_link');
+
+drevoTitle.appendChild(drevoTitleA);
+
+console.log(drevoTitle);
+header_drevo.appendChild(drevoTitle);
+console.log(header_drevo);
+console.log(drevoTitle);
+console.log(drevoTitleA);
 null !== footer &&
   ((footer.className = 'footer'),
   (footer.innerHTML = `   <div class="footer_wrapper">
@@ -1169,7 +1205,7 @@ null !== footer &&
           <p><a href="catalog.html">Каталог Товаров</a></p>
           <p><a href="dostavka.html">Доставка</a></p>
           <p><a href="portfolio.html">Наши работы</a></p>
-          <p><a href="otzovik.php">Отзывы</a></p>
+          <p><a href="reviews.php">Отзывы</a></p>
           <p><a href="about-us.html">О нас</a></p>
           <p><a href="contact.html">Контакты</a></p>
         </li>
@@ -1247,7 +1283,7 @@ null !== footer &&
           <a href="portfolio.html">Наши работы</a>
         </div>
         <div class="footer_wrapper_end_content_start_text">
-          <a href="otzovik.php">Отзывы</a>
+          <a href="reviews.php">Отзывы</a>
         </div>
         <div class="footer_wrapper_end_content_start_text">
           <a href="about-us.html">О нас</a>
