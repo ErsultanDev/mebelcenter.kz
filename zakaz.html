@@ -23,7 +23,15 @@ ob_start();
 <link rel="stylesheet" href="css/ie.css" type="text/css" media="screen">
 <![endif]-->
 <script language="javascript" type="text/javascript" src="js/jquery_1.5.2.js"></script>
-<script language="javascript" type="text/javascript" src="js/vpb_captcha_checker.js"></script></head>
+<script language="javascript" type="text/javascript" src="js/vpb_captcha_checker.js"></script><!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-1KVM9QVLPT"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-1KVM9QVLPT');
+</script> </head>
 <body id="page3"><script type="text/javascript">jQuery(function($){ $.mask.definitions['~']='[+-]';$('#phone').mask('8(799) 999-9999');});</script>	
 <!--==============================header=================================-->
 <header>

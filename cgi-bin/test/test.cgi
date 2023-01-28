@@ -9,7 +9,15 @@ Content-type: text/html
 <title></title>
 <meta http-equiv="Content-Type" content="text/html">
 <link rel="stylesheet" type="text/css" href="../../css/style.css">
-</head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-1KVM9QVLPT"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-1KVM9QVLPT');
+</script> </head>
 <body>
 <table cellspacing="0" cellpadding="0" border="0">
 <tr class="subhead" align="Left"><th>Name</th><th>Value</th></tr>
