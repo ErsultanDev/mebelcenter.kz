@@ -1128,7 +1128,7 @@ null !== header &&
         <a onclick="history.back()">Главная</a>
       </div>
       <div class="header_drevo_arrow">
-        <img src="images/arrowRightBlack.svg" alt="">
+        <p>/</p>
       </div>
     </div>
   </div>
@@ -1137,23 +1137,23 @@ null !== header &&
 
 `)
 
-let header_drevo = document.querySelector('.header_drevo .main');
+try {
+  let header_drevo = document.querySelector('.header_drevo .main');
 
-drevoTitle = document.createElement('div');
-drevoTitleA = document.createElement('a');
-const titleLogic = titleCopy ? titleCopy.textContent : titleCopy2.textContent;
-drevoTitleA.innerHTML = `${titleLogic}`;
-window.addEventListener('DOMContentLoaded', () => {});
+  drevoTitle = document.createElement('div');
+  drevoTitleA = document.createElement('a');
+  const titleLogic = titleCopy ? titleCopy.textContent : titleCopy2.textContent;
+  drevoTitleA.innerHTML = `${titleLogic}`;
+  window.addEventListener('DOMContentLoaded', () => {});
 
-drevoTitle.classList.add('header_drevo_link');
+  drevoTitle.classList.add('header_drevo_link');
 
-drevoTitle.appendChild(drevoTitleA);
+  drevoTitle.appendChild(drevoTitleA);
 
-console.log(drevoTitle);
-header_drevo.appendChild(drevoTitle);
-console.log(header_drevo);
-console.log(drevoTitle);
-console.log(drevoTitleA);
+  header_drevo.appendChild(drevoTitle);
+} catch (e) {
+
+}
 null !== footer &&
   ((footer.className = 'footer'),
     (footer.innerHTML = `   <div class="footer_wrapper">
@@ -1968,7 +1968,7 @@ productData21 = [{
     price: 62350,
   },
   {
-    link: 'ofisnaya-mebel_personal.html',
+    link: 'ofisnaya-mebel_office.html',
     title: 'Офисные шкафы',
     img: 'images/thumbs/office/tan.jpg',
     subtitle: 'Мебель для персонала',
@@ -2142,6 +2142,38 @@ productData21_4 = [{
     price: 89860,
   },
 ];
+productData21_5 = [{
+    link: 'o_mebel_1.html',
+    title: 'Шкаф-купе Vasanta V-77 Дуб Кобург',
+    img: 'images/kp02.jpg',
+    subtitle: ' Шкаф-купе Vasanta V-77 Дуб Кобург',
+    price: 89860,
+  },
+
+  {
+    link: 'o_mebel_2.html',
+    title: 'Шкаф-купе Vasanta V-77 Дуб Кобург',
+    img: 'images/oMebel1.jpg',
+    subtitle: ' Шкаф-купе Vasanta V-77 Дуб Кобург',
+    price: 89860,
+  },
+  {
+    link: 'o_mebel_3.html',
+    title: 'Шкаф-купе Контур ШР-124.2',
+    img: 'images/om02.jpg',
+    subtitle: 'Шкаф-купе Vasanta V-77 Дуб Кобург',
+    price: 89860,
+  },
+
+  {
+    link: 'o_mebel_4.html',
+    title: 'Стойки ресепшн Vasanta Дуб Кобург',
+    img: 'images/om03-1.jpg',
+    subtitle: 'Шкаф-купе Vasanta V-77 Дуб Кобург',
+    price: 89860,
+  },
+
+]
 productData22 = [{
     link: 'bar.html',
     title: 'Барные стойки',
@@ -2608,6 +2640,9 @@ switch (pageName) {
     break;
   case 'ofisnaya-mebel_char.html':
     displayList(productData21_4);
+    break;
+  case 'ofisnaya-mebel_office.html':
+    displayList(productData21_5);
     break;
   case 'resepshn.html':
     displayList(productData22);

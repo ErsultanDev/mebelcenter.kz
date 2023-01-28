@@ -8478,7 +8478,7 @@ button.toast-close-button {
 
 .toast-top-right {
   /* bottom: 12px; */
-  top: 135px;
+  top: 195px;
   /* left: 50%; */
   right: 12px;
   /* transform: translate(-50%, 0px); */
@@ -8611,7 +8611,7 @@ button.toast-close-button {
   transition-duration: 0.5s;
   position: absolute;
   right: -65px;
-  bottom: 70px;
+  bottom: 58px;
   box-shadow: 0 0 10px rgb(0 0 0 / 50%);
 }
 
@@ -8727,6 +8727,10 @@ button.toast-close-button {
   background: #fff !important;
   color: #0067c6 !important;
   border: 2px solid #0067c6 !important;
+}
+.header_drevo_arrow p{
+  font-size: 17px;
+  line-height: 7px;
 }
 @media all and (max-width: 240px) {
   #toast-container > div {
