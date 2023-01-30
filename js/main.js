@@ -206,6 +206,7 @@ const body = document.querySelector('body'),
   slider_for = document.querySelector('.slider-for'),
   slider_nav = document.querySelector('.slider-nav'),
   carouselSlider = document.querySelector('#carouselSlider'),
+  carouselSlider2 = document.querySelector('#carouselSlider2'),
   main_slider_adaptive = document.querySelector('.main_slider_adaptive'),
   otzyv = document.querySelector('otzyv'),
   about_block_slider = document.querySelector('.about_block_slider'),
@@ -315,34 +316,7 @@ if (slider_for !== null) {
   });
 }
 
-if (carouselSlider !== null) {
-  $('#carouselSlider').slick({
-    slidesToShow: 4,
-    slidesToScroll: 2,
-    arrows: true,
-    centerMode: false,
-    variableWidth: false,
-    responsive: [{
-        breakpoint: 820,
-        settings: {
-          slidesToShow: 3,
-          centerMode: false,
-          variableWidth: false,
-          // arrows: false,
-        },
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 2,
-          centerMode: false,
-          variableWidth: false,
-          // arrows: false,
-        },
-      },
-    ],
-  });
-}
+
 if (otzyv !== null) {
   $('.otzyv').slick({
     slidesToShow: 1,
@@ -1318,7 +1292,7 @@ null !== footer &&
   </div>
   <div class="footer_copyright">
   <div class="foot">
-    <p>&copy; 2010-2022 MebelCenter.kz</p>
+    <p>&copy; 2010-2023 MebelCenter.kz</p>
   </div>
   <div class="foot">
     <p>Все права защищены</p>
@@ -2983,7 +2957,7 @@ window.addEventListener('DOMContentLoaded', () => {
   // const script2 = document.createElement('script');
   // script2.src = 'js/jquery.maskedinput.min.js';
   const searchScript = document.createElement('script');
-  searchScript.src = '/js/smart-search.js';
+  searchScript.src = 'js/smart-search.js';
   document.querySelector('body').append(searchScript);
 
   // const mainScript = document.querySelector('script[src*="js/main.js"]');

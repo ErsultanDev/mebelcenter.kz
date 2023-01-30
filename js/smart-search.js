@@ -124,7 +124,10 @@ var _search = function (entries, patterns, fields, options) {
         return;
       }
       var fieldMatch = [];
-      var fieldResults = { field: field.join('.'), patterns: [] };
+      var fieldResults = {
+        field: field.join('.'),
+        patterns: []
+      };
       patterns.forEach(function (pattern) {
         var res = _find(pattern, fieldString, options);
         if (res) {
@@ -196,11 +199,10 @@ function smartSearch(entries, patterns, fields, options) {
   options = _buildOptions(options);
   patterns = sanitizeArray([].concat(patterns), options.caseSensitive);
   fields =
-    typeof fields === 'string'
-      ? {
-          [fields]: true,
-        }
-      : fields;
+    typeof fields === 'string' ? {
+      [fields]: true,
+    } :
+    fields;
   if (entries.length === 0 || patterns.length === 0) {
     return;
   }
@@ -383,8 +385,7 @@ function getEditDistance(a, b, max) {
 //     window.smartSearch = smartSearch;
 // }
 
-const data444 = [
-  {
+const data444 = [{
     link: 'djaz-gos.html',
     img: 'images/thumbs/gostinye/dja.jpeg',
     title: 'Гостиная Джаз',
@@ -813,7 +814,10 @@ document.querySelector('.search-btn').addEventListener('click', function (e) {
   var patterns = info.split(' ');
   console.log(patterns);
 
-  var fields = { title: true, code: true };
+  var fields = {
+    title: true,
+    code: true
+  };
   let searchedWord = document.querySelector('#txtSearch').value;
   if (localStorage.getItem('searched-word') === null) {
     localStorage.setItem('searched-word', JSON.stringify(searchedWord));
@@ -921,7 +925,10 @@ document.querySelector('#txtSearch').addEventListener('keypress', function (e) {
     var patterns = info.split(' ');
     console.log(patterns);
 
-    var fields = { title: true, code: true };
+    var fields = {
+      title: true,
+      code: true
+    };
     let searchedWord = document.querySelector('#txtSearch').value;
     if (localStorage.getItem('searched-word') === null) {
       localStorage.setItem('searched-word', JSON.stringify(searchedWord));
@@ -1033,7 +1040,10 @@ document.querySelector('.search-btn2').addEventListener('click', function (e) {
   var patterns = info.split(' ');
   console.log(patterns);
 
-  var fields = { title: true, code: true };
+  var fields = {
+    title: true,
+    code: true
+  };
   let searchedWord = document.querySelector('#txtSearch2').value;
   if (localStorage.getItem('searched-word') === null) {
     localStorage.setItem('searched-word', JSON.stringify(searchedWord));
@@ -1139,7 +1149,10 @@ document.querySelector('#txtSearch2').addEventListener('keypress', function (e) 
     let info = document.querySelector('#txtSearch2').value;
     var patterns = info.split(' ');
     console.log(patterns);
-    var fields = { title: true, code: true };
+    var fields = {
+      title: true,
+      code: true
+    };
     let searchedWord = document.querySelector('#txtSearch2').value;
     if (localStorage.getItem('searched-word') === null) {
       localStorage.setItem('searched-word', JSON.stringify(searchedWord));
@@ -1266,3 +1279,148 @@ function errorMsg() {
 
 //     label.find(".label-desc").html(selection);
 // });
+if (carouselSlider !== null) {
+  $('#carouselSlider').slick({
+    slidesToShow: 4,
+    slidesToScroll: 2,
+    arrows: true,
+    centerMode: false,
+    variableWidth: false,
+    dots:true,
+    responsive: [{
+        breakpoint: 820,
+        settings: {
+          slidesToShow: 3,
+          centerMode: false,
+          variableWidth: false,
+          // arrows: false,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          centerMode: false,
+          variableWidth: false,
+          // arrows: false,
+        },
+      },
+    ],
+  });
+}
+const maincatalog = document.querySelector('.maincatalog');
+if (carouselSlider2 !== null) {
+  $('#carouselSlider2').slick({
+    slidesToShow: 4,
+    slidesToScroll: 2,
+    arrows: true,
+    centerMode: false,
+    variableWidth: false,
+    responsive: [{
+        breakpoint: 820,
+        settings: {
+          slidesToShow: 3,
+          centerMode: false,
+          variableWidth: false,
+          // arrows: false,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          centerMode: false,
+          variableWidth: false,
+          // arrows: false,
+        },
+      },
+    ],
+  });
+}
+data444.forEach(function (e) {
+  if (
+    e.link == window.location.href.split("/").pop().split("#")[0].split("?")[0]
+  ) {
+    // localStorage.setItem('viewedURL', JSON.stringify(array_URL));
+
+    // Get the existing data
+    let existing = localStorage.getItem("viewedURL");
+
+    // If no existing data, create an array
+    // Otherwise, convert the localStorage string to an array
+    existing = existing ? existing.split(",") : [];
+
+    existing.push(e.link);
+
+    // Save back to localStorage
+    localStorage.setItem("viewedURL", existing.toString());
+
+    display_Viewed_Items(existing);
+  }
+});
+
+function display_Viewed_Items(array) {
+  // let span9_VI = document.querySelectorAll(".span9")[1];
+  let main_VI = document.createElement("div");
+  let main_V2 = document.createElement("div");
+  // main_V2.classList.add('slider_similar');
+  main_VI.innerHTML = `
+  <div class="slider_similar_title">
+    <h3>Просмотревшие товары</h3>
+  </div>
+  `;
+  let flexiselDemo5_VI = document.createElement("div");
+
+  flexiselDemo5_VI.setAttribute("id", "carouselSlider2");
+  main_V2.classList.add('slider_similar_history');
+
+  array.map((a) => {
+    data444.forEach(function (e) {
+      if (e.link == a) {
+        flexiselDemo5_VI.innerHTML += `
+        <div class="recomendation_item">
+        <a href="${e.link}" >
+      <div class="recomendation_item_img">
+        <img src="${e.img}" alt="${e.title}"></div>
+      <div class="recomendation_item_desc">
+            <p>${e.title}</p>
+        </div>
+         </a>
+     </div>
+      `;
+      }
+    });
+  });
+
+  main_VI.appendChild(flexiselDemo5_VI);
+  main_V2.appendChild(main_VI);
+  bg_bot_1.appendChild(main_V2);
+}
+
+$('#carouselSlider2').slick({
+  slidesToShow: 4,
+  slidesToScroll: 2,
+  arrows: true,
+  centerMode: false,
+  variableWidth: false,
+  dots:true,
+  responsive: [{
+      breakpoint: 820,
+      settings: {
+        slidesToShow: 3,
+        centerMode: false,
+        variableWidth: false,
+        // arrows: false,
+      },
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 2,
+        centerMode: false,
+        variableWidth: false,
+        // arrows: false,
+      },
+    },
+  ],
+});
